@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import Home from './home/Home'
-import Footer from './components/Footer'
+import Home from './home/Home';
+import Footer from './components/Footer';
 import Introduce from './home/Introduce';
-
+import Technologies from './components/Technologies';
+import Hobbies from './components/Hobbies';
+import Feedbacks from './components/Feedbacks';
 
 const Body = styled.div`
   width: 100%;
@@ -12,6 +14,9 @@ const Body = styled.div`
   overflow: scroll;
   justify-content: center;
   color: white;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
   h1 {
     font-size: 36px;
     font-weight: 800;
@@ -21,12 +26,28 @@ const Body = styled.div`
   }
 `;
 
+const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+
 export default function HomeInit() {
   return (
     <Body>
       <Home />
-      <Introduce />
-      <Footer />
+      <Container>
+        <Introduce />
+        <div style={{ width: '100%', backgroundColor: '#5b5b5d' }}>
+          <Technologies />
+          <Hobbies />
+          <Feedbacks />
+        </div>
+      </Container>
+      {/*  <Footer /> */}
     </Body>
   );
 }

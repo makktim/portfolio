@@ -1,0 +1,24 @@
+{
+  "Header": {
+    "buttonTitle": "Belépés",
+    "buttonLink": "https://cognityv.com/app",
+    "items": [
+      {
+        "path": "home",
+        "label": "Kezdőlap"
+      },
+      {
+        "path": "packages",
+        "label": "Csomagok"
+      },
+      {
+        "path": "pricing",
+        "label": "Árak"
+      },
+      {
+        "path": "about",
+        "label": "Rólunk"
+      }
+    ]
+  }
+}

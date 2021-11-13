@@ -1,0 +1,24 @@
+{
+  "Header": {
+    "titles": [
+      {
+        "title": "home",
+        "color": "white"
+      },
+      {
+        "title": "packages",
+        "color": "white"
+      }
+    ],
+    "buttons": [
+      {
+        "title": "home",
+        "link": "white"
+      },
+      {
+        "title": "packages",
+        "link": "white"
+      }
+    ]
+  }
+}
