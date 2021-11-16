@@ -1,4 +1,5 @@
 import React from 'react';
+import { createBrowserHistory } from 'history';
 import styled from 'styled-components';
 import Home from './home/Home';
 import Footer from './components/Footer';
@@ -6,6 +7,9 @@ import Introduce from './home/Introduce';
 import Technologies from './components/Technologies';
 import Hobbies from './components/Hobbies';
 import Feedbacks from './components/Feedbacks';
+import { Grid } from '@mui/material';
+import { Router } from 'react-router-dom';
+import history from './utils/history';
 
 const Body = styled.div`
   width: 100%;
@@ -14,40 +18,28 @@ const Body = styled.div`
   overflow: scroll;
   justify-content: center;
   color: white;
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
-  h1 {
-    font-size: 36px;
-    font-weight: 800;
-  }
-  p {
-    font-weight: 500;
-  }
-`;
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
 `;
 
 export default function HomeInit() {
   return (
-    <Body>
-      <Home />
-      <Container>
-        <Introduce />
-        <div style={{ width: '100%', backgroundColor: '#5b5b5d' }}>
-          <Technologies />
-          <Hobbies />
-          <Feedbacks />
-        </div>
-      </Container>
-      {/*  <Footer /> */}
-    </Body>
+    <Router history={history}>
+      <Body>
+        <Home />
+        <Grid container rowSpacing={1}>
+          <Grid item xs={12} md={4}>
+            <Introduce />
+          </Grid>
+          <Grid item xs={12} md={8}>
+            <div style={{ backgroundColor: '#5b5b5d' }}>
+              <Technologies />
+              <Hobbies />
+              <Feedbacks />
+            </div>
+          </Grid>
+        </Grid>
+
+        {/*  <Footer /> */}
+      </Body>
+    </Router>
   );
 }
