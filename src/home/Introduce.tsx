@@ -10,7 +10,6 @@ import { Typography } from '@mui/material';
 const Main = styled.div`
   display: flex;
   flex: 1 1;
-  min-width: 350px;
   flex-direction: column;
   background-color: #3c3a3d;
 `;

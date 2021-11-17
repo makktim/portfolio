@@ -5,12 +5,12 @@ import { WebSiteContext } from '../utils/WebsiteContext';
 
 const Main = styled.div`
   display: flex;
-  background-image: url(${backgroundImage});
+  /*   background-image: url(${backgroundImage});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0.8;
-  height: 400px;
+  height: 400px; */
   justify-content: center;
   flex-direction: column;
   align-items: center;

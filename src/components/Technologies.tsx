@@ -4,12 +4,13 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import HardSkills from './HardSkills';
 import SoftSkills from './SoftSkills';
+import { Grid } from '@mui/material';
 
 interface LinkProps {
   readonly active: boolean | undefined;
 }
 
-const NextButtonLink = styled(Link)`
+/* const NextButtonLink = styled(Link)`
   color: #0192ae;
   background-color: ${({ active }: LinkProps) => (active ? '#3c3a3d' : '#5b5b5d')};
   padding: 16px;
@@ -36,7 +37,7 @@ export default function Technologies() {
       case 1:
         return <SoftSkills />;
       default:
-        return <HardSkills />;
+        return <SoftSkills />;
     }
   };
 
@@ -71,5 +72,44 @@ export default function Technologies() {
       </Box>
       {renderContent()}
     </Box>
+  );
+}
+ */
+
+export default function Technologies() {
+  const [selectMenu, setSelectMenu] = useState(0);
+
+  const renderContent = () => {
+    switch (selectMenu) {
+      case 0:
+        return <HardSkills />;
+      case 1:
+        return <SoftSkills />;
+      default:
+        return <SoftSkills />;
+    }
+  };
+
+  const HeaderLinks = {
+    items: [
+      {
+        path: '/',
+        label: 'Technikai készségek'
+      },
+      {
+        path: '/',
+        label: 'Egyéni készségek'
+      }
+    ]
+  };
+  return (
+    <Grid container rowSpacing={1}>
+      <Grid item xs={12} md={6}>
+        <HardSkills />
+      </Grid>
+      <Grid item xs={12} md={6}>
+        <SoftSkills />
+      </Grid>
+    </Grid>
   );
 }
