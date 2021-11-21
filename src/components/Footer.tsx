@@ -20,20 +20,6 @@ const HeaderTop = styled.div`
   }
 `;
 
-const Nav = styled.div`
-  display: flex;
-  padding-left: 12%;
-  color: white;
-  background-color: #5b5b5d;
-  align-items: baseline;
-  @media (max-width: 1200px) {
-    padding-left: 1px;
-  }
-  @media (max-width: 768px) {
-    display: none;
-  }
-`;
-
 /* const Logo = styled(Link)`
 display: flex;
 img {

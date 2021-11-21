@@ -10,8 +10,13 @@ import { Typography } from '@mui/material';
 const Main = styled.div`
   display: flex;
   flex: 1 1;
+  height: 100vh;
+  overflow: scroll;
   flex-direction: column;
   background-color: #3c3a3d;
+  @media (max-width: 900px) {
+    height: 100%;
+  }
 `;
 
 const ContactBox = styled.div`
@@ -62,17 +67,6 @@ export default function Introduce() {
         <Typography variant='body1' gutterBottom component='div' style={{ color: '#0192ae' }}>
           MUNKATAPASZTALAT
         </Typography>
-        <div style={{ display: 'flex', flexDirection: 'row', margin: ' 10px', justifyContent: 'space-around' }}>
-          <Typography variant='body1' gutterBottom component='div' style={{ color: '#0192ae' }}>
-            2015-2016
-          </Typography>
-          <Typography variant='subtitle1' gutterBottom component='div' style={{ margin: '0px 10px' }}>
-            Trenkwalder Recruitment Kft.
-          </Typography>
-        </div>
-        <Typography variant='subtitle2' gutterBottom component='div'>
-          Pozíció: Projekt Munkaügyi koordinátor
-        </Typography>
         <div style={{ display: 'flex', flexDirection: 'row', margin: '10px', justifyContent: 'space-around' }}>
           <Typography variant='body1' gutterBottom component='div' style={{ color: '#0192ae' }}>
             2020-
@@ -84,25 +78,36 @@ export default function Introduce() {
         <Typography variant='subtitle2' gutterBottom component='div'>
           Pozíció: Full Stack fejlesztő (React, NodeJs, React Native
         </Typography>
+        <div style={{ display: 'flex', flexDirection: 'row', margin: ' 10px', justifyContent: 'space-around' }}>
+          <Typography variant='body1' gutterBottom component='div' style={{ color: '#0192ae' }}>
+            2015-2016
+          </Typography>
+          <Typography variant='subtitle1' gutterBottom component='div' style={{ margin: '0px 10px' }}>
+            Trenkwalder Recruitment Kft.
+          </Typography>
+        </div>
+        <Typography variant='subtitle2' gutterBottom component='div'>
+          Pozíció: Projekt Munkaügyi koordinátor
+        </Typography>
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', margin: '10px' }}>
         <Typography variant='body1' gutterBottom component='div' style={{ color: '#0192ae' }}>
           ISKOLAI VÉGZZETTSÉG
         </Typography>
-        <div style={{ display: 'flex', flexDirection: 'row', margin: ' 10px', justifyContent: 'space-around' }}>
-          <Typography variant='body1' gutterBottom component='div' style={{ color: '#0192ae' }}>
-            2006-2011
-          </Typography>
-          <Typography variant='subtitle2' gutterBottom component='div' style={{ margin: '0px 10px' }}>
-            Széchenyi István Gyak. Ker. Szakközép
-          </Typography>
-        </div>
         <div style={{ display: 'flex', flexDirection: 'row', margin: '10px', justifyContent: 'space-around' }}>
           <Typography variant='body1' gutterBottom component='div' style={{ color: '#0192ae' }}>
             2019-2020
           </Typography>
           <Typography variant='subtitle2' gutterBottom component='div' style={{ margin: '0px 10px' }}>
             CODECOL (Full Stack fejlesztői képzés)
+          </Typography>
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'row', margin: ' 10px', justifyContent: 'space-around' }}>
+          <Typography variant='body1' gutterBottom component='div' style={{ color: '#0192ae' }}>
+            2006-2011
+          </Typography>
+          <Typography variant='subtitle2' gutterBottom component='div' style={{ margin: '0px 10px' }}>
+            Széchenyi István Gyak. Ker. Szakközép
           </Typography>
         </div>
       </div>

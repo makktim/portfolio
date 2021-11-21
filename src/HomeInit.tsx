@@ -1,5 +1,4 @@
 import React from 'react';
-import { createBrowserHistory } from 'history';
 import styled from 'styled-components';
 import Home from './home/Home';
 import Footer from './components/Footer';
@@ -11,15 +10,26 @@ import { Grid } from '@mui/material';
 import { Router } from 'react-router-dom';
 import history from './utils/history';
 import FavouriteQoute from './components/FavouriteQoute';
+import IntroduceImages from './components/IntroduceImages';
 
 const Body = styled.div`
   width: 100%;
-  height: 100vh;
   background-color: #3c3a3d;
-  max-height: 100vh;
-  overflow: scroll;
   justify-content: center;
   color: white;
+  @media (max-width: 900px) {
+    height: 100vh;
+    overflow: scroll;
+  }
+`;
+
+const BlocksContainer = styled.div`
+  background-color: #5b5b5d;
+  height: 100vh;
+  overflow: scroll;
+  @media (max-width: 900px) {
+    overflow: auto;
+  }
 `;
 
 export default function HomeInit() {
@@ -32,16 +42,16 @@ export default function HomeInit() {
             <Introduce />
           </Grid>
           <Grid item xs={12} md={9}>
-            <div style={{ backgroundColor: '#5b5b5d' }}>
+            <BlocksContainer>
               <FavouriteQoute />
+              <IntroduceImages />
               <Technologies />
               <Hobbies />
               <Feedbacks />
-            </div>
+              <Footer />
+            </BlocksContainer>
           </Grid>
         </Grid>
-
-        {/*  <Footer /> */}
       </Body>
     </Router>
   );

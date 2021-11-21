@@ -1,6 +1,3 @@
-import { Box } from '@mui/system';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import HardSkills from './HardSkills';
 import SoftSkills from './SoftSkills';

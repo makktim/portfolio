@@ -1,14 +1,31 @@
-import { Box, Grid, Typography } from '@mui/material';
+import { Box, Card, Typography } from '@mui/material';
 import { useState } from 'react';
 import styled from 'styled-components';
 
-const SlideshowContainer = styled(Box)`
+const SlideshowContainer = styled(Card)`
   position: relative;
+  min-height: 250px;
+  :before {
+    content: '&';
+    font-size: 45vh;
+    color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: -10vh;
+  }
 `;
 
 const MySlides = styled(Box)`
-  padding: 80px;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.1);
   text-align: center;
+  min-height: 230px;
+`;
+
+const Blockquote = styled('blockquote')`
+  color: #0192ae;
+  font-family: Tahoma, sans-serif;
+  font-size: 24px;
+  margin: 0 auto;
 `;
 
 const LeftArrow = styled.a`
@@ -60,14 +77,16 @@ export default function Feedbacks() {
   ];
 
   return (
-    <SlideshowContainer>
+    <SlideshowContainer sx={{ margin: '10px', background: '#5b5b5d' }}>
       {Feedbacks.map(
         ({ quote, writer }: any, i: number) =>
           i === selectQuote && (
-            <MySlides key={i}>
-              <q>{quote}</q>
-              <p>{writer}</p>
-            </MySlides>
+            <Blockquote>
+              <MySlides key={i}>
+                <q>{quote}</q>
+                <p>{writer}</p>
+              </MySlides>
+            </Blockquote>
           )
       )}
       <LeftArrow

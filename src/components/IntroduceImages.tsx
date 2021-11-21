@@ -1,12 +1,12 @@
 import { Box, Grid, styled } from '@mui/material';
-import picture17 from '../pictures/17.jpg';
-import picture5 from '../pictures/5.jpeg';
-import picture16 from '../pictures/16.jpeg';
-import picture13 from '../pictures/13.jpeg';
-import picture4 from '../pictures/4.jpeg';
-import picture11 from '../pictures/11.jpeg';
+import picture6 from '../pictures/6.jpeg';
+import picture3 from '../pictures/3.jpeg';
+import picture5 from '../pictures/me.jpeg';
+import picture2 from '../pictures/2.jpg';
+import picture14 from '../pictures/14.jpeg';
+import picture1 from '../pictures/1.jpg';
 
-export default function Hobbies() {
+export default function IntroduceImages() {
   const Gallery = styled(Grid)`
     transition: all 0.3s ease(gravity);
     background-color: #82a6cb;
@@ -47,22 +47,22 @@ export default function Hobbies() {
     <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '50px' }}>
       <Gallery container>
         <Grid item xs={12} md={2}>
-          <Img src={picture17} alt='' />
+          <Img src={picture6} alt='' />
+        </Grid>
+        <Grid item xs={12} md={2}>
+          <Img src={picture14} alt='' />
         </Grid>
         <Grid item xs={12} md={2}>
           <Img src={picture5} alt='' />
         </Grid>
         <Grid item xs={12} md={2}>
-          <Img src={picture13} alt='' />
+          <Img src={picture1} alt='' />
         </Grid>
         <Grid item xs={12} md={2}>
-          <Img src={picture16} alt='' />
+          <Img src={picture2} alt='' />
         </Grid>
         <Grid item xs={12} md={2}>
-          <Img src={picture4} alt='' />
-        </Grid>
-        <Grid item xs={12} md={2}>
-          <Img src={picture11} alt='' />
+          <Img src={picture3} alt='' />
         </Grid>
       </Gallery>
     </Box>
