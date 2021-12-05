@@ -1,12 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HomeInit from './HomeInit'
+import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <HomeInit />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import profilePicture from '../pictures/omid-armin-a5EbQpl-IHw-unsplash.jpg';
+import profilePicture from '../pictures/profile/me_profile.jpg';
 import phone from '../pictures/icons/telephone.png';
 import chat from '../pictures/icons/chat.png';
 import home from '../pictures/icons/home.png';
@@ -11,11 +11,16 @@ const Main = styled.div`
   display: flex;
   flex: 1 1;
   height: 100vh;
+  /*   margin-top: 5vh; */
   overflow: scroll;
   flex-direction: column;
-  background-color: #3c3a3d;
+  background: #212121;
+  /*   background-color: #3c3a3d; */
   @media (max-width: 900px) {
     height: 100%;
+  }
+  @media (max-width: 900px) {
+    margin-top: 20vh;
   }
 `;
 
@@ -34,8 +39,9 @@ export default function Introduce() {
 
   return (
     <Main>
-      <img style={{ borderRadius: '50%', margin: '10px auto' }} src={profilePicture} alt='mypic' height='auto' width='250px' />
+      <img style={{ borderRadius: '50%', margin: '10px auto', width: 200, height: 200, objectFit: 'cover' }} src={profilePicture} alt='mypic' />
       <div style={{ fontSize: '30px', fontWeight: 600, margin: 'auto' }}>Makkai - Kása Tímea</div>
+      <q style={{ color: '#0192ae', textAlign: 'center', margin: '5px' }}>Fordítsd arcodat a nap felé, mert akkor minden árnyék mögéd kerül</q>
       <div>
         <ContactBox>
           <img style={{ height: '24px' }} alt='phone' src={phone} />
@@ -55,14 +61,21 @@ export default function Introduce() {
             1108 Bp, Hang utca 4.
           </Typography>
         </ContactBox>
+        <ContactBox>
+          <img style={{ height: '24px' }} alt='home' src={home} />
+          <Typography variant='body1' component='div' style={{ color: '#0192ae' }}>
+            Github Link
+          </Typography>
+        </ContactBox>
       </div>
       <div>
-        <div style={{ borderBottom: '1px solid #0192ae', width: '50%', margin: '10px auto' }} />
+        <div style={{ borderBottom: '1px solid ', width: '50%', margin: '10px auto' }} />
         <Typography variant='subtitle2' gutterBottom component='div' style={{ margin: '20px 10px' }}>
           Egy Mosolygós, Barátságos, Sportos, állatbarát lány vagyok, aki keresi a kihívásokat és a lehetőséget a fejlődésre. Ezért választottam
           hivatásomnak a szoftverfejlesztés világát, ahol nap mint nap lehetőségem van egy problémára megoldást keresni vagy új dolgot létrehozni.
         </Typography>
       </div>
+
       <div style={{ display: 'flex', flexDirection: 'column', margin: '10px' }}>
         <Typography variant='body1' gutterBottom component='div' style={{ color: '#0192ae' }}>
           MUNKATAPASZTALAT

@@ -9,12 +9,14 @@ import Feedbacks from './components/Feedbacks';
 import { Grid } from '@mui/material';
 import { Router } from 'react-router-dom';
 import history from './utils/history';
-import FavouriteQoute from './components/FavouriteQoute';
+import WorkExperience from './components/WorkExperience';
 import IntroduceImages from './components/IntroduceImages';
+import Nav from './nav/Nav';
 
 const Body = styled.div`
   width: 100%;
-  background-color: #3c3a3d;
+
+  /*   background-color: #3c3a3d; */
   justify-content: center;
   color: white;
   @media (max-width: 900px) {
@@ -36,14 +38,15 @@ export default function HomeInit() {
   return (
     <Router history={history}>
       <Body>
-        <Home />
         <Grid container rowSpacing={1}>
           <Grid item xs={12} md={3}>
             <Introduce />
           </Grid>
           <Grid item xs={12} md={9}>
+            {/* <Nav /> */}
             <BlocksContainer>
-              <FavouriteQoute />
+              <Home />
+              <WorkExperience />
               <IntroduceImages />
               <Technologies />
               <Hobbies />

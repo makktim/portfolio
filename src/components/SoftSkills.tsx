@@ -10,7 +10,7 @@ const SkillTitle = styled(Typography)`
   display: flex;
   filter: grayscale(100%);
   color: #0192ae;
-  text-align: center;
+  padding: 6px;
   filter: ${({ category }: CategoryProps) => (category ? 'grayscale(0)' : 'grayscale(100%)')};
   &:hover,
   &:active {
@@ -39,7 +39,18 @@ export default function SoftSkills() {
     second: [{ name: 'türelmes' }, { name: 'Probléma megoldó' }, { name: 'Célorientált' }, { name: 'Adobe Premier' }, { name: 'Adobe Photoshop' }]
   };
   return (
-    <Card sx={{ margin: '10px', padding: '16px', background: '#5b5b5d', boxShadow: '2px 2px 4px rgba(0.4,0.4,0.4,0.4)' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', width: '100%' }}>
+      {Object.entries(HardSkills).map(([key, item], index) => (
+        <Box key={index} sx={{ display: 'flex', flexDirection: 'column' }}>
+          {item.map(({ name }: any, i: number) => (
+            <Box key={i} /* category={categoryHover} */>
+              <SkillTitle category={categoryHover}>{name}</SkillTitle>
+            </Box>
+          ))}
+        </Box>
+      ))}
+    </Box>
+    /*     <Card sx={{ margin: '10px', padding: '16px', background: '#5b5b5d', boxShadow: '2px 2px 4px rgba(0.4,0.4,0.4,0.4)' }}>
       <SkillTitle onMouseEnter={() => setCategoryHover(true)} onMouseLeave={() => setCategoryHover(false)} category={categoryHover}>
         Egyéni Kézségek
       </SkillTitle>
@@ -54,6 +65,6 @@ export default function SoftSkills() {
           </Box>
         ))}
       </Box>
-    </Card>
+    </Card> */
   );
 }

@@ -1,4 +1,4 @@
-import { Box, Card, Typography } from '@mui/material';
+import { Box, Card } from '@mui/material';
 import { useState } from 'react';
 import styled from 'styled-components';
 
@@ -77,7 +77,7 @@ export default function Feedbacks() {
   ];
 
   return (
-    <SlideshowContainer sx={{ margin: '10px', background: '#5b5b5d' }}>
+    <SlideshowContainer sx={{ background: '#5b5b5d' }}>
       {Feedbacks.map(
         ({ quote, writer }: any, i: number) =>
           i === selectQuote && (

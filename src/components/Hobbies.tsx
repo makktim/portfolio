@@ -5,8 +5,11 @@ import picture16 from '../pictures/16.jpeg';
 import picture13 from '../pictures/13.jpeg';
 import picture4 from '../pictures/4.jpeg';
 import picture11 from '../pictures/11.jpeg';
+import { useNav } from '../customHooks/useNav';
 
 export default function Hobbies() {
+  const aboutRef = useNav('Hobbies');
+
   const Gallery = styled(Grid)`
     transition: all 0.3s ease(gravity);
     background-color: #82a6cb;
@@ -44,7 +47,7 @@ export default function Hobbies() {
   `;
 
   return (
-    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '50px' }}>
+    <Box ref={aboutRef} id='hobbiesImages' sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '5rem' }}>
       <Gallery container>
         <Grid item xs={12} md={2}>
           <Img src={picture17} alt='' />
