@@ -1,6 +1,8 @@
 import { Card, styled, Typography } from '@mui/material';
 import { Box } from '@mui/system';
-import { useState } from 'react';
+import get from 'lodash/get';
+import { useContext } from 'react';
+import { WebsiteContext } from '../context/WebsiteContext';
 
 interface CategoryProps {
   readonly category: boolean | undefined;
@@ -8,11 +10,9 @@ interface CategoryProps {
 
 const SkillTitle = styled(Typography)`
   display: flex;
-  filter: grayscale(100%);
   color: #0192ae;
-  color: white;
-  padding: '6px 0px';
-  filter: ${({ category }: CategoryProps) => (category ? 'grayscale(0)' : 'grayscale(100%)')};
+  cursor: crosshair;
+  padding: 6px 0px;
   &:hover,
   &:active {
     filter: grayscale(0);
@@ -21,13 +21,7 @@ const SkillTitle = styled(Typography)`
 
 const SkillCaption = styled(Typography)`
   display: flex;
-  filter: grayscale(100%);
-  color: #0192ae;
-  filter: ${({ category }: CategoryProps) => (category ? 'grayscale(0)' : 'grayscale(100%)')};
-  &:hover,
-  &:active {
-    filter: grayscale(0);
-  }
+  color: #fff;
 `;
 
 const ItemBox = styled(Card)`
@@ -44,30 +38,17 @@ const ItemBox = styled(Card)`
 `;
 
 export default function Projects() {
-  const [categoryHover, setCategoryHover] = useState(false);
+  const { ContentInfo } = useContext(WebsiteContext);
+  const projectArray = get(ContentInfo, ['about', 'categories', 2, 'projects']);
 
-  const HardSkills = {
-    first: [
-      { name: 'Cognityv Web / Mobil', technologies: 'React / React Native / Node Js' },
-      { name: 'Polinvent Kalkulátor', technologies: 'React / Node Js' },
-      { name: 'www.polinvent.com', technologies: 'React / Gatsby' }
-    ],
-    second: [
-      { name: 'www.cognityv.com', technologies: 'React / Gatsby' },
-      { name: 'www.bambobaby.com', technologies: 'Wordpress' },
-      { name: 'www.mkdekor.com', technologies: 'Wordpress' }
-    ]
-  };
   return (
     <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', width: '100%' }}>
-      {Object.entries(HardSkills).map(([key, item], index) => (
+      {Object.entries(projectArray).map(([key, item]: any, index) => (
         <Box key={index} sx={{ display: 'flex', flexDirection: 'column' }}>
           {item.map(({ name, technologies }: any, i: number) => (
             <Box key={i} /* category={categoryHover} */>
-              <SkillTitle variant='h6' category={categoryHover}>
-                {name}
-              </SkillTitle>
-              <SkillCaption category={categoryHover} variant='caption' align='center'>
+              <SkillTitle variant='h5'>{name}</SkillTitle>
+              <SkillCaption variant='caption' align='center'>
                 {technologies}
               </SkillCaption>
             </Box>

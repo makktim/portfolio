@@ -1,5 +1,6 @@
-import { Box, Grid, styled } from '@mui/material';
-import { useNav } from '../customHooks/useNav';
+import { Box, styled } from '@mui/material';
+import { useContext } from 'react';
+import { WebsiteContext } from '../context/WebsiteContext';
 
 const MySlides = styled(Box)`
   padding: 80px;
@@ -19,20 +20,14 @@ const Blockquote = styled('blockquote')`
 `;
 
 export default function WorkExperience() {
-  const aboutRef = useNav('WorkExperience');
+  const { ContentInfo } = useContext(WebsiteContext);
 
   return (
-    <section ref={aboutRef} id='workExperience'>
-      <Blockquote>
-        <MySlides>
-          <q>
-            Az elmúlt két évben főleg React, React Natíve, Typescript és NodeJs technológiákat használtam a munkám során, ahol a célunk az volt, hogy
-            létrehozzunk egy alkalmazást a vállalkozások életének megkönnyítésére. Ezen kívül a partner cégek számára készítettünk honlapokat, amit
-            Gatsby vagy React használatával késztettünk el.
-          </q>
-          <p></p>
-        </MySlides>
-      </Blockquote>
-    </section>
+    <Blockquote>
+      <MySlides>
+        <q>{ContentInfo.about.workExperience}</q>
+        <p></p>
+      </MySlides>
+    </Blockquote>
   );
 }
