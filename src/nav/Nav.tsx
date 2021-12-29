@@ -1,23 +1,17 @@
 import { Box } from '@mui/material';
 import React, { useContext, useState } from 'react';
-import styled from 'styled-components';
+import { styled } from '@mui/system';
 import { WebsiteContext } from '../context/WebsiteContext';
 import Icon from '../utils/icons';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { HashLink as Link } from 'react-router-hash-link';
 
-export const navLinks = [
-  { navLinkId: 'Introduce', scrollToId: 'introduce' },
-  { navLinkId: 'About', scrollToId: 'about' },
-  { navLinkId: 'Hobbies', scrollToId: 'hobbies' }
-];
-
 interface ActiveProps {
   readonly active: boolean | undefined;
 }
 
-const NavDiv = styled.div`
+const NavDiv = styled('div')`
   width: 100%;
   position: sticky;
   z-index: 10;
@@ -66,7 +60,7 @@ const FlagBox = styled(Box)`
 `;
 
 const Nav = () => {
-  const { setLanguage, language } = useContext(WebsiteContext);
+  const { setLanguage, language, ContentInfo } = useContext(WebsiteContext);
 
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -80,7 +74,7 @@ const Nav = () => {
 
   return (
     <NavDiv>
-      {navLinks.map(({ navLinkId, scrollToId }, idx) => (
+      {ContentInfo.header.navLinks.map(({ navLinkId, scrollToId }: any, idx: number) => (
         <NavButton smooth to={`#${scrollToId}`} key={idx}>
           {navLinkId}
         </NavButton>
@@ -124,7 +118,18 @@ const Nav = () => {
           }}
           transformOrigin={{ horizontal: 'right', vertical: 'top' }}
           anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}>
-          <DropdownItem
+          {ContentInfo.header.language.map(({ title, lang }: any, index: number) => (
+            <DropdownItem
+              active={language === lang}
+              sx={{ color: language === lang ? '#0192ae' : 'white' }}
+              onClick={() => {
+                setLanguage(lang);
+              }}>
+              {title}
+            </DropdownItem>
+          ))}
+
+          {/*           <DropdownItem
             active={language === 'en'}
             sx={{ color: language === 'en' ? '#0192ae' : 'white' }}
             onClick={() => {
@@ -139,7 +144,7 @@ const Nav = () => {
               setLanguage('hu');
             }}>
             Hungarian
-          </DropdownItem>
+          </DropdownItem> */}
         </Menu>
       </React.Fragment>
     </NavDiv>

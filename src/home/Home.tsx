@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import { styled } from '@mui/system';
 import { WebsiteContext } from '../context/WebsiteContext';
 import avatar from '../pictures/avatar.png';
-import { Button } from '@mui/material';
 import { HashLink as Link } from 'react-router-hash-link';
+import { Typography } from '@mui/material';
 
 const Wrapper = styled('div')`
   display: flex;
@@ -11,22 +11,25 @@ const Wrapper = styled('div')`
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: center;
-  padding-bottom: 7rem;
+  padding-bottom: 3rem;
   background: #5b5b5d;
 `;
 
-const Text = styled('div')`
+const Text = styled(Typography)`
   width: 25rem;
   margin-left: 1rem;
   max-width: 100%;
   line-height: 2em;
   overflow: hidden;
+  @media (max-width: 900px) {
+    width: auto;
+  }
 `;
 
 export const MoreButton = styled(Link)({
-  width: '12rem',
+  width: '10rem',
   height: '4rem',
-  margin: '16px 0px',
+  margin: '16px 12px',
   background: '#0192ae',
   borderRadius: '16px',
   cursor: 'pointer',
@@ -41,6 +44,16 @@ export const MoreButton = styled(Link)({
   }
 });
 
+const Img = styled('img')`
+  height: 30rem;
+  width: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  @media (max-width: 900px) {
+    height: 20rem;
+  }
+`;
+
 export default function Home() {
   const { ContentInfo } = useContext(WebsiteContext);
 
@@ -52,7 +65,7 @@ export default function Home() {
         <MoreButton to='#about'>{ContentInfo.home.button}</MoreButton>
       </div>
       <div>
-        <img style={{ height: '30rem', width: 'auto', paddingRight: '15px', paddingLeft: '15px' }} alt='phone' src={avatar} />
+        <Img alt='phone' src={avatar} />
       </div>
     </Wrapper>
   );

@@ -1,4 +1,4 @@
-import { Email, GitHub, Home, Phone, Computer, TheaterComedy, BarChart, ColorLens, Flag } from '@mui/icons-material';
+import { Email, GitHub, Home, Phone, Computer, TheaterComedy, BarChart, ColorLens, Flag, LinkedIn } from '@mui/icons-material';
 import { SvgIcon } from '@mui/material';
 
 const IconList: any = {
@@ -10,7 +10,8 @@ const IconList: any = {
   theaterComedyIcon: TheaterComedy,
   barChart: BarChart,
   colorLens: ColorLens,
-  flag: Flag
+  flag: Flag,
+  linkedIn: LinkedIn
 };
 
 const Icon = ({ icon }: any) => {

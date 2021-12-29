@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
-import styled from 'styled-components';
+import { styled } from '@mui/system';
 import profilePicture from '../pictures/profile/me_profile.jpg';
 import { WebsiteContext } from '../context/WebsiteContext';
 import { Typography } from '@mui/material';
 import Icon from '../utils/icons';
 
-const Main = styled.div`
+const Main = styled('div')`
   display: flex;
   flex: 1 1;
-  height: 110vh;
+  height: 100vh;
   max-height: auto;
   overflow: scroll;
   flex-direction: column;
@@ -16,12 +16,9 @@ const Main = styled.div`
   @media (max-width: 900px) {
     height: 100%;
   }
-  @media (max-width: 900px) {
-    margin-top: 20vh;
-  }
 `;
 
-const ContactBox = styled.div`
+const ContactBox = styled('div')`
   display: flex;
   flex-direction: row;
   align-content: flex-start;
@@ -35,7 +32,7 @@ export default function Introduce() {
 
   return (
     <Main>
-      <img style={{ borderRadius: '50%', margin: '10vh auto 10px', width: 200, height: 200, objectFit: 'cover' }} src={profilePicture} alt='mypic' />
+      <img style={{ borderRadius: '50%', margin: '1vh auto 10px', width: 200, height: 200, objectFit: 'cover' }} src={profilePicture} alt='mypic' />
       <div style={{ fontSize: '26px', fontWeight: 600, margin: 'auto' }}>{ContentInfo.introduce.name}</div>
       <q style={{ color: '#0192ae', textAlign: 'center', padding: '15px', fontSize: 18 }}>{ContentInfo.introduce.quote}</q>
       <div>

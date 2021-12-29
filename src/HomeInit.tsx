@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import { styled } from '@mui/system';
 import Home from './home/Home';
 import Footer from './components/Footer';
 import Introduce from './home/Introduce';
@@ -12,9 +12,8 @@ import WorkExperience from './components/WorkExperience';
 import Skills from './components/Skills';
 import Nav from './nav/Nav';
 
-const Body = styled.div`
+const Body = styled('div')`
   width: 100%;
-  /*   background-color: #3c3a3d; */
   justify-content: center;
   color: white;
   @media (max-width: 900px) {
@@ -23,7 +22,7 @@ const Body = styled.div`
   }
 `;
 
-const BlocksContainer = styled.div`
+const BlocksContainer = styled('div')`
   background-color: #5b5b5d;
   height: 100vh;
   overflow: scroll;

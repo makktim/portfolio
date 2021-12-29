@@ -29,6 +29,13 @@ const ButtonStyle = styled(Button)`
   }
 `;
 
+const GridContainer = styled(Grid)`
+  margin: 18px 10px;
+  @media (max-width: 900px) {
+    margin: 0px;
+  }
+`;
+
 export default function Skills() {
   const [selectMenu, setSelectMenu] = useState('Programming Skills');
   const { ContentInfo } = useContext(WebsiteContext);
@@ -54,9 +61,12 @@ export default function Skills() {
         <Typography variant='h4' align='center' style={{ color: 'white', paddingTop: '5rem' }}>
           {ContentInfo.about.title}
         </Typography>
-        <div style={{ width: '30%', margin: '8px auto 40px', border: '1px solid #0192ae', opacity: '0.5' }} />
+        <div style={{ width: '30%', margin: '8px auto 10px', border: '1px solid #0192ae', opacity: '0.5' }} />
+        <Typography sx={{ margin: '0px 40px 40px' }} variant='subtitle2' align='center' style={{ color: 'white' }}>
+          {ContentInfo.about.description}
+        </Typography>
         <IntroduceImages />
-        <Grid sx={{ margin: '18px 10px' }} container justifyContent='center' alignItems='center' rowSpacing={1}>
+        <GridContainer container justifyContent='center' alignItems='center' rowSpacing={1}>
           <Grid
             sx={{
               display: 'flex',
@@ -67,7 +77,8 @@ export default function Skills() {
               alignItems: 'flex-start'
             }}
             item
-            xs={4}>
+            xs={8}
+            md={4}>
             {ContentInfo.about.categories.map(({ title, icon, components }: any) => (
               <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
                 <ButtonStyle
@@ -84,10 +95,10 @@ export default function Skills() {
               </div>
             ))}
           </Grid>
-          <Grid item xs={6.5}>
+          <Grid item xs={8} md={6.5}>
             {renderContent()}
           </Grid>
-        </Grid>
+        </GridContainer>
       </div>
     </Grid>
   );

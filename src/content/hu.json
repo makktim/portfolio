@@ -25,15 +25,22 @@
       }
     ]
   },
+  "header": {
+    "language": [{ "title": "Angol", "lang": "en" }, { "title": "Magyar", "lang": "hu" }],
+    "navLinks": [
+      { "navLinkId": "Bemutatkozás", "scrollToId": "introduce" },
+      { "navLinkId": "Rólam", "scrollToId": "about" },
+      { "navLinkId": "Hobbik", "scrollToId": "hobbies" }
+    ]
+  },
   "home": {
-    "description": "Én egy Full-stack fejlesztő vagyok, aki Mosolygós, Barátságos, Sportos, állatbarát, aki keresi a kihívásokat és a lehetőséget a fejlődésre. Ezért választottam hivatásomnak a szoftverfejlesztés világát, ahol nap mint nap lehetőségem van egy problémára megoldást keresni vagy új dolgot létrehozni.",
-    "button": "Bővebben rólam",
-    "buttonLink": "",
-    "avatarImage": ""
+    "description": "Én egy Mosolygós, Barátságos, Sportos, állatbarát fejlesztő vagyok, aki keresi a kihívásokat és a lehetőséget a fejlődésre.",
+    "button": "Bővebben rólam"
   },
   "about": {
     "workExperience": "Az elmúlt két évben főleg React, React Natíve, Typescript és NodeJs technológiákat használtam a munkám során, ahol a célunk az volt, hogy létrehozzunk egy alkalmazást a vállalkozások életének megkönnyítésére. Ezen kívül a partner cégek számára készítettünk honlapokat, amit Gatsby vagy React használatával késztettünk el.",
     "title": "Rólam",
+    "description": "Azért is választottam hivatásomnak a szoftverfejlesztés világát, mert itt nap mint nap alkalmam nyílik egy problémára megoldást keresni vagy akár új dolgot létrehozni.",
     "categories": [
       {
         "title": "Technikai készségek",
@@ -76,8 +83,8 @@
             { "name": "www.polinvent.com", "technologies": "React / Gatsby" }
           ],
           "second": [
-            { "name": "www.bambobaby.com", "technologies": "Wordpress" },
-            { "name": "www.mkdekor.com", "technologies": "Wordpress" },
+            { "name": "bambobaby", "technologies": "Wordpress (www.bambobaby.com)" },
+            { "name": "mkdekor", "technologies": "Wordpress (www.mkdekor.com)" },
             { "name": "Malibu Run", "technologies": "Akadályfutó verseny" }
           ]
         }
@@ -110,19 +117,38 @@
       }
     ]
   },
-  "feedbacks": [
-    {
-      "quote": "A feleségem egy vidám, kedves, okos és céltudatos személyiség, aki folyamatosan képezi magát és fejleszti készségeit annak érdekében, hogy elérje kitűzött céljait és megoldja a rá bízott feladatokat. Nem fél megújulni, mert tudja, hogy ez hozta el őt idáig.",
-      "writer": "- Makkai Gábor (husband)"
-    },
+  "hobbies": {
+    "description": "Szabadidőmben szeretek új dolgokat kipróbálni és a párommal, kutyusunkkal vagy barátaimmal tölteni az időt."
+  },
+  "feedbacks": {
+    "description": "Fontosnak tartom a visszajelzést, a környezetünkben élőktől, mert így tudunk leginkább fejlődni és jobbá válni.",
+    "quote": [
+      {
+        "quote": "Timi a csapat lelkiismeretes és kreatív tagja. Nagy erőfeszítéseket tesz, hogy a megadott feladatait időben elvégezze, és nem fél kérdezni. Mindenkivel könnyen megtalálta a közös hangot, így mindig vidám tagja volt a csapatnak. A feladatok felosztása nem könnyű, de ő mindíg ügyesen csinálta, szem előtt tartva a többi csapattársa képességeit. Úgy gondolom, hogy hűséges és megbízható junior fejlesztő lesz, akire számíthat majd.",
+        "writer": "- Szabó Rudi (Mentor)"
+      },
+      {
+        "quote": "A feleségem egy vidám, kedves, okos és céltudatos személyiség, aki folyamatosan képezi magát és fejleszti készségeit annak érdekében, hogy elérje kitűzött céljait és megoldja a rá bízott feladatokat. Nem fél megújulni, mert tudja, hogy ez hozta el őt idáig.",
+        "writer": "- Makkai Gábor (férj)"
+      },
 
-    {
-      "quote": "Timi lelkes és kitartó ember, nagyon szeretek vele dolgozni. Nagyon kreatív, szeretek tanulni tőle. Számíthatok rá, ha valami gondom van és másokkal is törődik, ha kell. nagyon jó csapatjátékos, és egyben nagyon jó ember, aki tud tanulni a hibáiból, és arra ösztönzi magát/másokat, hogy kihozzák magukból a legjobbat.",
-      "writer": "- Asoum Alagha (Csapattárs)"
-    },
-    {
-      "quote": "Timi a csapat lelkiismeretes és kreatív tagja. Nagy erőfeszítéseket tesz, hogy a megadott feladatait időben elvégezze, és nem fél kérdezni. Mindenkivel könnyen megtalálta a közös hangot, így mindig vidám tagja volt a csapatnak. A feladatok felosztása nem könnyű, de ő mindíg ügyesen csinálta, szem előtt tartva a többi csapattársa képességeit. Úgy gondolom, hogy hűséges és megbízható junior fejlesztő lesz, akire számíthat majd.",
-      "writer": "- Szabó Rudi (Mentor)"
-    }
-  ]
+      {
+        "quote": "Timi lelkes és kitartó ember, nagyon szeretek vele dolgozni. Nagyon kreatív, szeretek tanulni tőle. Számíthatok rá, ha valami gondom van és másokkal is törődik, ha kell. nagyon jó csapatjátékos, és egyben nagyon jó ember, aki tud tanulni a hibáiból, és arra ösztönzi magát/másokat, hogy kihozzák magukból a legjobbat.",
+        "writer": "- Asoum Alagha (csapattárs)"
+      }
+    ]
+  },
+  "footer": {
+    "title": "© Copyright 2021 Készítette Makkai-Kása Tímea",
+    "links": [
+      {
+        "icon": "linkedIn",
+        "link": "https://www.linkedin.com/in/t%C3%ADmea-k%C3%A1sa-b83958100/"
+      },
+      {
+        "icon": "gitHub",
+        "link": "https://github.com/"
+      }
+    ]
+  }
 }

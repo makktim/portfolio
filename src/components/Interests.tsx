@@ -29,8 +29,6 @@ export default function Interests() {
   const { ContentInfo } = useContext(WebsiteContext);
   const interestArray = get(ContentInfo, ['about', 'categories', 3, 'interest']);
 
-  console.log('interestArray', interestArray);
-
   return (
     <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', width: '100%' }}>
       {Object.entries(interestArray).map(([key, item]: any, index) => (

@@ -44,7 +44,7 @@ export default function IntroduceImages() {
   `;
 
   return (
-    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '5rem' }}>
+    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '1rem 5rem 5rem 5rem' }}>
       <Gallery container>
         <Grid item xs={12} md={2}>
           <Img src={picture6} alt='' />

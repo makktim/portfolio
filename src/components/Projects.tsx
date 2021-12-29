@@ -1,4 +1,4 @@
-import { Card, styled, Typography } from '@mui/material';
+import { Grid, styled, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import get from 'lodash/get';
 import { useContext } from 'react';
@@ -24,19 +24,6 @@ const SkillCaption = styled(Typography)`
   color: #fff;
 `;
 
-const ItemBox = styled(Card)`
-  background-color: #3c3a3d;
-  margin: 6px;
-  padding: 16px;
-  transition: 0.25s;
-  cursor: pointer;
-  opacity: ${({ category }: CategoryProps) => (category ? '0.9' : '0.5')};
-  &:hover {
-    transition: 0.25s;
-    margin-left: 1rem;
-  }
-`;
-
 export default function Projects() {
   const { ContentInfo } = useContext(WebsiteContext);
   const projectArray = get(ContentInfo, ['about', 'categories', 2, 'projects']);
@@ -44,16 +31,14 @@ export default function Projects() {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', width: '100%' }}>
       {Object.entries(projectArray).map(([key, item]: any, index) => (
-        <Box key={index} sx={{ display: 'flex', flexDirection: 'column' }}>
+        <Grid sx={{ paddingLeft: ['1px', '1rem'] }} container key={index} /* sx={{ display: 'flex', flexDirection: 'column', marginLeft: '2rem' }} */>
           {item.map(({ name, technologies }: any, i: number) => (
-            <Box key={i} /* category={categoryHover} */>
-              <SkillTitle variant='h5'>{name}</SkillTitle>
-              <SkillCaption variant='caption' align='center'>
-                {technologies}
-              </SkillCaption>
-            </Box>
+            <Grid item xs={8} md={10} key={i}>
+              <SkillTitle variant='h6'>{name}</SkillTitle>
+              <SkillCaption variant='caption'>{technologies}</SkillCaption>
+            </Grid>
           ))}
-        </Box>
+        </Grid>
       ))}
     </Box>
   );

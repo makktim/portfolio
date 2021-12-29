@@ -20,19 +20,28 @@
         "sectionTitle": "EDUCATIONAL ATTAINMENT",
         "work": [
           { "company": "CODECOL (Full Stack developer training)", "position": "", "date": " 2019-2020" },
-          { "company": "Széchenyi István High school", "position": "", "date": "2006-2011" }
+          { "company": "Széchenyi István Pract. trade High school", "position": "", "date": "2006-2011" }
         ]
       }
     ]
   },
+  "header": {
+    "language": [{ "title": "English", "lang": "en" }, { "title": "Hungarian", "lang": "hu" }],
+    "navLinks": [
+      { "navLinkId": "Introduce", "scrollToId": "introduce" },
+      { "navLinkId": "About", "scrollToId": "about" },
+      { "navLinkId": "Hobbies", "scrollToId": "hobbies" }
+    ]
+  },
   "home": {
-    "description": "Én egy Full-stack fejlesztő vagyok, aki Mosolygós, Barátságos, Sportos, állatbarát, aki keresi a kihívásokat és a lehetőséget a fejlődésre. Ezért választottam hivatásomnak a szoftverfejlesztés világát, ahol nap mint nap lehetőségem van egy problémára megoldást keresni vagy új dolgot létrehozni.",
+    "description": "I am a Smiling, Friendly, Athletic, Pet Friendly developer who is looking for challenges and opportunities for improve myself.",
     "button": "More about me",
     "avatarImage": ""
   },
   "about": {
     "workExperience": "In the last two years I have mainly used React, React Native, Typescript, and NodeJs technologies in my work, where our goal has been to create an application to make life easier for businesses. In addition, we created websites for the partner companies, which we created using Gatsby or React.",
     "title": "About",
+    "description": "One thea reason is why I chose the world of software development as my profession, where every day I have the opportunity to find a solution to a problem or even create something new.",
     "categories": [
       {
         "title": "Programming Skills",
@@ -81,8 +90,8 @@
             { "name": "www.polinvent.com", "technologies": "React / Gatsby" }
           ],
           "second": [
-            { "name": "www.bambobaby.com", "technologies": "Wordpress" },
-            { "name": "www.mkdekor.com", "technologies": "Wordpress" },
+            { "name": "bambobaby", "technologies": "Wordpress (www.bambobaby.com)" },
+            { "name": "mkdekor", "technologies": "Wordpress (www.mkdekor.com)" },
             { "name": "Malibu Run", "technologies": "Obstacle races" }
           ]
         }
@@ -115,19 +124,38 @@
       }
     ]
   },
-  "feedbacks": [
-    {
-      "quote": "My wife is a cheerful, kind, smart and purposeful personality who is constantly training herself and developing her skills in order to achieve her goals and solve the tasks assigned to her. SHe’s not afraid to renew because she knows it brought her this far.",
-      "writer": "- Makkai Gábor (husband)"
-    },
+  "hobbies": {
+    "description": "In my free time I like to try new things and spend time with my partner, out doggie or our friends."
+  },
+  "feedbacks": {
+    "description": "I consider feedback from those around us to be important because this is the best way we can develop and improve.",
+    "quote": [
+      {
+        "quote": "  Timi is a conscientious and creative member of a team. She showed great effort to complete the given tasks in time and was not afraid to ask us whenever she had a question. She found the common voice easily with everyone, so was always a cheerful member of the team.  Dividing the tasks is not easy, but she does it well by keeping in mind the other teammates skills. I think she will be a loyal and reliable junior developer you can count on.",
+        "writer": "- Szabó Rudi (Mentor)"
+      },
+      {
+        "quote": "My wife is a cheerful, kind, smart and purposeful personality who is constantly training herself and developing her skills in order to achieve her goals and solve the tasks assigned to her. SHe’s not afraid to renew because she knows it brought her this far.",
+        "writer": "- Makkai Gábor (Husband)"
+      },
 
-    {
-      "quote": "Timi is an enthusiastic and persistent person,and I really like to work with her.She is very creative,and I like to learn from her.I can count on her if I have some issues, she cares with others when needed.she is a very good team player, and also a very good person who can learn from her mistakes and encourage herself/others to do her/their best.",
-      "writer": "- Asoum Alagha (teammate)"
-    },
-    {
-      "quote": "  Timi is a conscientious and creative member of a team. She showed great effort to complete the given tasks in time and was not afraid to ask us whenever she had a question. She found the common voice easily with everyone, so was always a cheerful member of the team.  Dividing the tasks is not easy, but she does it well by keeping in mind the other teammates skills. I think she will be a loyal and reliable junior developer you can count on.",
-      "writer": "- Szabó Rudi (Mentor)"
-    }
-  ]
+      {
+        "quote": "Timi is an enthusiastic and persistent person,and I really like to work with her.She is very creative,and I like to learn from her.I can count on her if I have some issues, she cares with others when needed.she is a very good team player, and also a very good person who can learn from her mistakes and encourage herself/others to do her/their best.",
+        "writer": "- Asoum Alagha (Teammate)"
+      }
+    ]
+  },
+  "footer": {
+    "title": "© Copyright 2021 created by Makkai-Kása Tímea",
+    "links": [
+      {
+        "icon": "linkedIn",
+        "link": "https://www.linkedin.com/in/t%C3%ADmea-k%C3%A1sa-b83958100/"
+      },
+      {
+        "icon": "gitHub",
+        "link": "https://github.com/"
+      }
+    ]
+  }
 }

@@ -1,10 +1,13 @@
-import { BrowserRouter as Router, Link } from 'react-router-dom';
-import styled from 'styled-components';
-import React from 'react';
+import React, { useContext } from 'react';
+import { styled } from '@mui/system';
+import { Box, Typography } from '@mui/material';
+import Icon from '../utils/icons';
+import { WebsiteContext } from '../context/WebsiteContext';
 
-const HeaderTop = styled.div`
+const HeaderTop = styled('div')`
   display: flex;
-  background-color: #212121;
+  flex-direction: column;
+  background-color: rgba(21, 21, 21, 0.7);
   flex-grow: 1;
   height: 100px;
   margin: auto;
@@ -21,5 +24,21 @@ const HeaderTop = styled.div`
 `;
 
 export default function Footer() {
-  return <HeaderTop>Készítette Makkai-Kása Tímea</HeaderTop>;
+  const { ContentInfo } = useContext(WebsiteContext);
+  return (
+    <HeaderTop>
+      <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+        {ContentInfo.footer.links.map((item: any) => (
+          <Box sx={{ margin: 1 }}>
+            <a style={{ color: 'white', textDecoration: 'none' }} href={item.link}>
+              <Icon icon={item.icon} />
+            </a>
+          </Box>
+        ))}
+      </Box>
+      <Typography variant='subtitle2' align='center' style={{}}>
+        {ContentInfo.footer.title}
+      </Typography>
+    </HeaderTop>
+  );
 }

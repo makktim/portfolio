@@ -5,8 +5,12 @@ import picture16 from '../pictures/16.jpeg';
 import picture13 from '../pictures/13.jpeg';
 import picture4 from '../pictures/4.jpeg';
 import picture11 from '../pictures/11.jpeg';
+import { useContext } from 'react';
+import { WebsiteContext } from '../context/WebsiteContext';
 
 export default function Hobbies() {
+  const { ContentInfo } = useContext(WebsiteContext);
+
   const Gallery = styled(Grid)`
     transition: all 0.3s ease(gravity);
     background-color: #82a6cb;
@@ -48,8 +52,11 @@ export default function Hobbies() {
       <Typography variant='h4' align='center' style={{ color: 'white', paddingTop: '5rem' }}>
         Hobbies
       </Typography>
-      <div style={{ width: '30%', margin: '8px auto 40px', border: '1px solid #0192ae', opacity: '0.5' }} />
-      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '5rem' }}>
+      <div style={{ width: '30%', margin: '8px auto 10px', border: '1px solid #0192ae', opacity: '0.5' }} />
+      <Typography sx={{ margin: '0px 40px 40px' }} variant='subtitle2' align='center' style={{ color: 'white' }}>
+        {ContentInfo.hobbies.description}
+      </Typography>
+      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '1rem 5rem 5rem 5rem' }}>
         <Gallery container>
           <Grid item xs={12} md={2}>
             <Img src={picture17} alt='' />
