@@ -5,11 +5,8 @@ import picture5 from '../pictures/me.jpeg';
 import picture2 from '../pictures/2.jpg';
 import picture14 from '../pictures/14.jpeg';
 import picture1 from '../pictures/1.jpg';
-import { useNav } from '../customHooks/useNav';
 
 export default function IntroduceImages() {
-  const aboutRef = useNav('IntroduceImages');
-
   const Gallery = styled(Grid)`
     transition: all 0.3s ease(gravity);
     background-color: #82a6cb;
@@ -47,7 +44,7 @@ export default function IntroduceImages() {
   `;
 
   return (
-    <Box ref={aboutRef} id='introduceImages' sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '5rem' }}>
+    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '5rem' }}>
       <Gallery container>
         <Grid item xs={12} md={2}>
           <Img src={picture6} alt='' />

@@ -1,6 +1,8 @@
-import { Card, styled, Typography } from '@mui/material';
+import { Grid, styled, Typography } from '@mui/material';
 import { Box } from '@mui/system';
-import { useState } from 'react';
+import get from 'lodash/get';
+import { useContext } from 'react';
+import { WebsiteContext } from '../context/WebsiteContext';
 
 interface CategoryProps {
   readonly category: boolean | undefined;
@@ -8,11 +10,10 @@ interface CategoryProps {
 
 const SkillTitle = styled(Typography)`
   display: flex;
-  filter: grayscale(100%);
-  color: #0192ae;
   color: white;
-  padding: '6px 0px';
-  filter: ${({ category }: CategoryProps) => (category ? 'grayscale(0)' : 'grayscale(100%)')};
+  padding: 6px 0px;
+  cursor: crosshair;
+  color: #0192ae;
   &:hover,
   &:active {
     filter: grayscale(0);
@@ -21,61 +22,26 @@ const SkillTitle = styled(Typography)`
 
 const SkillCaption = styled(Typography)`
   display: flex;
-  filter: grayscale(100%);
-  color: #0192ae;
-  filter: ${({ category }: CategoryProps) => (category ? 'grayscale(0)' : 'grayscale(100%)')};
-  &:hover,
-  &:active {
-    filter: grayscale(0);
-  }
-`;
-
-const ItemBox = styled(Card)`
-  background-color: #3c3a3d;
-  margin: 6px;
-  padding: 16px;
-  transition: 0.25s;
-  cursor: pointer;
-  opacity: ${({ category }: CategoryProps) => (category ? '0.9' : '0.5')};
-  &:hover {
-    transition: 0.25s;
-    margin-left: 1rem;
-  }
+  color: #fff;
 `;
 
 export default function Interests() {
-  const [categoryHover, setCategoryHover] = useState(false);
+  const { ContentInfo } = useContext(WebsiteContext);
+  const interestArray = get(ContentInfo, ['about', 'categories', 3, 'interest']);
 
-  const HardSkills = {
-    first: [
-      {
-        name: 'Önfejlesztés',
-        technologies: 'Szívesen megyek olyan előadásokra, vagy olvasok olyan könyveket, amelyek arról szólnak, hogy lehetünk jobbak.'
-      },
-      { name: 'Kosárlabda', technologies: 'Gyerekkorom óta az egyik kedvenc sportágam, ezért ha tehetem a parkban játszom.' },
-      { name: 'Zene', technologies: 'Minden ami zene' }
-    ],
-    second: [
-      { name: 'Olvasás', technologies: 'Önfejlesztő könyvek és Regények is egyaránt' },
-      { name: 'Utazás', technologies: 'Szeretünk a férjemmel új helyeket felfedezni, belföldön és külföldön is egyaránt' },
-      { name: 'Barátok', technologies: 'Közös tevékenységek' }
-    ]
-  };
+  console.log('interestArray', interestArray);
+
   return (
     <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', width: '100%' }}>
-      {Object.entries(HardSkills).map(([key, item], index) => (
-        <Box key={index} sx={{ display: 'flex', flexDirection: 'column', marginLeft: '10px' }}>
+      {Object.entries(interestArray).map(([key, item]: any, index) => (
+        <Grid sx={{ paddingLeft: '1rem' }} container key={index} /* sx={{ display: 'flex', flexDirection: 'column', marginLeft: '2rem' }} */>
           {item.map(({ name, technologies }: any, i: number) => (
-            <Box key={i} /* category={categoryHover} */>
-              <SkillTitle variant='h6' category={categoryHover}>
-                {name}
-              </SkillTitle>
-              <SkillCaption category={categoryHover} variant='caption' align='center'>
-                {technologies}
-              </SkillCaption>
-            </Box>
+            <Grid item md={10} key={i}>
+              <SkillTitle variant='h6'>{name}</SkillTitle>
+              <SkillCaption variant='caption'>{technologies}</SkillCaption>
+            </Grid>
           ))}
-        </Box>
+        </Grid>
       ))}
     </Box>
   );

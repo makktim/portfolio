@@ -1,15 +1,12 @@
-import { Box, Grid, styled } from '@mui/material';
+import { Box, Grid, styled, Typography } from '@mui/material';
 import picture17 from '../pictures/17.jpg';
 import picture5 from '../pictures/5.jpeg';
 import picture16 from '../pictures/16.jpeg';
 import picture13 from '../pictures/13.jpeg';
 import picture4 from '../pictures/4.jpeg';
 import picture11 from '../pictures/11.jpeg';
-import { useNav } from '../customHooks/useNav';
 
 export default function Hobbies() {
-  const aboutRef = useNav('Hobbies');
-
   const Gallery = styled(Grid)`
     transition: all 0.3s ease(gravity);
     background-color: #82a6cb;
@@ -47,27 +44,33 @@ export default function Hobbies() {
   `;
 
   return (
-    <Box ref={aboutRef} id='hobbiesImages' sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '5rem' }}>
-      <Gallery container>
-        <Grid item xs={12} md={2}>
-          <Img src={picture17} alt='' />
-        </Grid>
-        <Grid item xs={12} md={2}>
-          <Img src={picture5} alt='' />
-        </Grid>
-        <Grid item xs={12} md={2}>
-          <Img src={picture13} alt='' />
-        </Grid>
-        <Grid item xs={12} md={2}>
-          <Img src={picture16} alt='' />
-        </Grid>
-        <Grid item xs={12} md={2}>
-          <Img src={picture4} alt='' />
-        </Grid>
-        <Grid item xs={12} md={2}>
-          <Img src={picture11} alt='' />
-        </Grid>
-      </Gallery>
+    <Box id='hobbies'>
+      <Typography variant='h4' align='center' style={{ color: 'white', paddingTop: '5rem' }}>
+        Hobbies
+      </Typography>
+      <div style={{ width: '30%', margin: '8px auto 40px', border: '1px solid #0192ae', opacity: '0.5' }} />
+      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '5rem' }}>
+        <Gallery container>
+          <Grid item xs={12} md={2}>
+            <Img src={picture17} alt='' />
+          </Grid>
+          <Grid item xs={12} md={2}>
+            <Img src={picture5} alt='' />
+          </Grid>
+          <Grid item xs={12} md={2}>
+            <Img src={picture13} alt='' />
+          </Grid>
+          <Grid item xs={12} md={2}>
+            <Img src={picture16} alt='' />
+          </Grid>
+          <Grid item xs={12} md={2}>
+            <Img src={picture4} alt='' />
+          </Grid>
+          <Grid item xs={12} md={2}>
+            <Img src={picture11} alt='' />
+          </Grid>
+        </Gallery>
+      </Box>
     </Box>
   );
 }
