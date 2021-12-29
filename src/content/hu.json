@@ -1,0 +1,128 @@
+{
+  "introduce": {
+    "name": "Makkai - Kása Tímea",
+    "quote": "Fordítsd arcodat a nap felé, mert akkor minden árnyék mögéd kerül",
+    "contacts": [
+      { "icon": "phone", "value": "+3670/553-5813" },
+      { "icon": "email", "value": "kasatim01@gmail.com" },
+      { "icon": "home", "value": "1108 Bp, Hang utca 4." },
+      { "icon": "gitHub", "value": "Github Link" }
+    ],
+    "experience": [
+      {
+        "sectionTitle": "MUNKATAPASZTALAT",
+        "work": [
+          { "company": "Cognityv Technologies Kft.", "position": "Pozíció: Full Stack fejlesztő (React, NodeJs, React Native", "date": "2020-" },
+          { "company": "Trenkwalder Recruitment Kft.", "position": "Pozíció: Projekt Munkaügyi koordinátor", "date": " 2015-2016" }
+        ]
+      },
+      {
+        "sectionTitle": "ISKOLAI VÉGZETTSÉG",
+        "work": [
+          { "school": "CODECOL (Full Stack fejlesztői képzés)", "date": " 2019-2020" },
+          { "company": "Széchenyi István Gyak. Ker. Szakközép", "date": "2006-2011" }
+        ]
+      }
+    ]
+  },
+  "home": {
+    "description": "Én egy Full-stack fejlesztő vagyok, aki Mosolygós, Barátságos, Sportos, állatbarát, aki keresi a kihívásokat és a lehetőséget a fejlődésre. Ezért választottam hivatásomnak a szoftverfejlesztés világát, ahol nap mint nap lehetőségem van egy problémára megoldást keresni vagy új dolgot létrehozni.",
+    "button": "Bővebben rólam",
+    "buttonLink": "",
+    "avatarImage": ""
+  },
+  "about": {
+    "workExperience": "Az elmúlt két évben főleg React, React Natíve, Typescript és NodeJs technológiákat használtam a munkám során, ahol a célunk az volt, hogy létrehozzunk egy alkalmazást a vállalkozások életének megkönnyítésére. Ezen kívül a partner cégek számára készítettünk honlapokat, amit Gatsby vagy React használatával késztettünk el.",
+    "title": "Rólam",
+    "categories": [
+      {
+        "title": "Technikai készségek",
+        "components": "Programming Skills",
+        "icon": "computer",
+        "hardSkills": {
+          "first": [
+            { "name": "Javascript / Typescript" },
+            { "name": "React/React Native" },
+            { "name": "Html/CSS" },
+            { "name": "SQL" },
+            { "name": "Gatsby" }
+          ],
+          "second": [{ "name": "Docusaurus" }, { "name": "JAVA" }, { "name": "GIT" }, { "name": "Adobe termékek" }, { "name": "Office" }]
+        }
+      },
+      {
+        "title": "Képességeim",
+        "components": "Soft skills",
+        "icon": "theaterComedyIcon",
+        "softSkills": {
+          "first": [{ "name": "Csapatjátékos" }, { "name": "Kommunikáció" }, { "name": "Kitartó" }, { "name": "ambíciózus" }, { "name": "Kreatív" }],
+          "second": [
+            { "name": "Időgazdálkodás" },
+            { "name": "Probléma megoldó" },
+            { "name": "Célorientált" },
+            { "name": "Alkalmazkodó kézség" },
+            { "name": "Türelmes" }
+          ]
+        }
+      },
+      {
+        "title": "Projektek",
+        "components": "Projects",
+        "icon": "barChart",
+        "projects": {
+          "first": [
+            { "name": "Cognityv Web / Mobil", "technologies": "React / React Native / Node Js" },
+            { "name": "Polinvent Kalkulátor", "technologies": "React / Node Js" },
+            { "name": "www.polinvent.com", "technologies": "React / Gatsby" }
+          ],
+          "second": [
+            { "name": "www.bambobaby.com", "technologies": "Wordpress" },
+            { "name": "www.mkdekor.com", "technologies": "Wordpress" },
+            { "name": "Malibu Run", "technologies": "Akadályfutó verseny" }
+          ]
+        }
+      },
+      {
+        "title": "Érdeklődés",
+        "components": "Interests",
+        "icon": "colorLens",
+        "interest": {
+          "first": [
+            {
+              "name": "Filmek / Sorozatok",
+              "technologies": "Filmek és sorozzatok minden mennyiségben :)"
+            },
+            {
+              "name": "Sport",
+              "technologies": "Gyerekkorom óta az egyik kedvenc sportágam, a kosárlabda, de a legtöbb sportot szívesen űzöm vagy próbálom ki, ha tehetem."
+            },
+            { "name": "Zene", "technologies": "Ha kell kikapcsol, ha kell felpörget, de mindíg is az életem része volt" }
+          ],
+          "second": [
+            {
+              "name": "Olvasás / Önfejlesztés",
+              "technologies": "Szívesen olvasok könyveket,arról, hogy válhaunk jobbá, de időnként kikapcsolódásnak a legjobb egy izgalmas regény."
+            },
+            { "name": "Utazás", "technologies": "Mindegy, hogy Belföld, külföld, túra vagy wellness, ha tehetjük megyünk!" },
+            { "name": "Barátok", "technologies": "Utazás, túrázás, lézerharc és néha egy kis felujítás" }
+          ]
+        }
+      }
+    ]
+  },
+  "feedbacks": [
+    {
+      "quote": "A feleségem egy vidám, kedves, okos és céltudatos személyiség, aki folyamatosan képezi magát és fejleszti készségeit annak érdekében, hogy elérje kitűzött céljait és megoldja a rá bízott feladatokat. Nem fél megújulni, mert tudja, hogy ez hozta el őt idáig.",
+      "writer": "- Makkai Gábor (husband)"
+    },
+
+    {
+      "quote": "Timi lelkes és kitartó ember, nagyon szeretek vele dolgozni. Nagyon kreatív, szeretek tanulni tőle. Számíthatok rá, ha valami gondom van és másokkal is törődik, ha kell. nagyon jó csapatjátékos, és egyben nagyon jó ember, aki tud tanulni a hibáiból, és arra ösztönzi magát/másokat, hogy kihozzák magukból a legjobbat.",
+      "writer": "- Asoum Alagha (Csapattárs)"
+    },
+    {
+      "quote": "Timi a csapat lelkiismeretes és kreatív tagja. Nagy erőfeszítéseket tesz, hogy a megadott feladatait időben elvégezze, és nem fél kérdezni. Mindenkivel könnyen megtalálta a közös hangot, így mindig vidám tagja volt a csapatnak. A feladatok felosztása nem könnyű, de ő mindíg ügyesen csinálta, szem előtt tartva a többi csapattársa képességeit. Úgy gondolom, hogy hűséges és megbízható junior fejlesztő lesz, akire számíthat majd.",
+      "writer": "- Szabó Rudi (Mentor)"
+    }
+  ]
+}

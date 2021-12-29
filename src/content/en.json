@@ -1,0 +1,133 @@
+{
+  "introduce": {
+    "name": "Makkai - Kása Tímea",
+    "quote": "Turn your face towards the sun, because then all the shadows will be behind you",
+    "contacts": [
+      { "icon": "phone", "value": "+3670/553-5813" },
+      { "icon": "email", "value": "kasatim01@gmail.com" },
+      { "icon": "home", "value": "1108 Bp, Hang utca 4." },
+      { "icon": "gitHub", "value": "Github Link" }
+    ],
+    "experience": [
+      {
+        "sectionTitle": "WORK EXPERIENCE",
+        "work": [
+          { "company": "Cognityv Technologies Kft.", "position": "Position: Full Stack developer (React, NodeJs, React Native", "date": "2020-" },
+          { "company": "Trenkwalder Recruitment Kft.", "position": "Position: Project labor coordinator", "date": " 2015-2016" }
+        ]
+      },
+      {
+        "sectionTitle": "EDUCATIONAL ATTAINMENT",
+        "work": [
+          { "company": "CODECOL (Full Stack developer training)", "position": "", "date": " 2019-2020" },
+          { "company": "Széchenyi István High school", "position": "", "date": "2006-2011" }
+        ]
+      }
+    ]
+  },
+  "home": {
+    "description": "Én egy Full-stack fejlesztő vagyok, aki Mosolygós, Barátságos, Sportos, állatbarát, aki keresi a kihívásokat és a lehetőséget a fejlődésre. Ezért választottam hivatásomnak a szoftverfejlesztés világát, ahol nap mint nap lehetőségem van egy problémára megoldást keresni vagy új dolgot létrehozni.",
+    "button": "More about me",
+    "avatarImage": ""
+  },
+  "about": {
+    "workExperience": "In the last two years I have mainly used React, React Native, Typescript, and NodeJs technologies in my work, where our goal has been to create an application to make life easier for businesses. In addition, we created websites for the partner companies, which we created using Gatsby or React.",
+    "title": "About",
+    "categories": [
+      {
+        "title": "Programming Skills",
+        "components": "Programming Skills",
+        "icon": "computer",
+        "hardSkills": {
+          "first": [
+            { "name": "Javascript / Typescript" },
+            { "name": "React/React Native" },
+            { "name": "Html/CSS" },
+            { "name": "SQL" },
+            { "name": "Gatsby" }
+          ],
+          "second": [{ "name": "Docusaurus" }, { "name": "JAVA" }, { "name": "GIT" }, { "name": "Adobe Products" }, { "name": "Office" }]
+        }
+      },
+      {
+        "title": "Soft skills",
+        "components": "Soft skills",
+        "icon": "theaterComedyIcon",
+        "softSkills": {
+          "first": [
+            { "name": "Team player" },
+            { "name": "Good communication skill" },
+            { "name": "Persistent" },
+            { "name": "Ambitious" },
+            { "name": "Creative" }
+          ],
+          "second": [
+            { "name": "Time management" },
+            { "name": "Problem solving skill" },
+            { "name": "Solution oriented" },
+            { "name": "adaptability" },
+            { "name": "Patient" }
+          ]
+        }
+      },
+      {
+        "title": "Projects",
+        "components": "Projects",
+        "icon": "barChart",
+        "projects": {
+          "first": [
+            { "name": "Cognityv Web / Mobil", "technologies": "React / React Native / Node Js" },
+            { "name": "Polinvent Calculator", "technologies": "React / Node Js" },
+            { "name": "www.polinvent.com", "technologies": "React / Gatsby" }
+          ],
+          "second": [
+            { "name": "www.bambobaby.com", "technologies": "Wordpress" },
+            { "name": "www.mkdekor.com", "technologies": "Wordpress" },
+            { "name": "Malibu Run", "technologies": "Obstacle races" }
+          ]
+        }
+      },
+      {
+        "title": "Interests",
+        "components": "Interests",
+        "icon": "colorLens",
+        "interest": {
+          "first": [
+            {
+              "name": "Movies / Series",
+              "technologies": "Movies and series in all quantities"
+            },
+            {
+              "name": "Sport",
+              "technologies": "One of my favorite sports since I was a kid is basketball, but I like to play or try most sports if I can."
+            },
+            { "name": "Music", "technologies": "If I need it turn of, If I need it spins up, but its always been a part of my life" }
+          ],
+          "second": [
+            {
+              "name": "Reading / Movies / series",
+              "technologies": "I enjoy reading books about how to get better, but sometimes, the best thing is to relax an exciting novel."
+            },
+            { "name": "Travelling", "technologies": "It doesn't matter if it's domestic, abroad, hiking or wellness, if it possible we can go!" },
+            { "name": "Friends", "technologies": "Traveling, hiking, eating, laser fighting and sometimes a little refurbishment" }
+          ]
+        }
+      }
+    ]
+  },
+  "feedbacks": [
+    {
+      "quote": "My wife is a cheerful, kind, smart and purposeful personality who is constantly training herself and developing her skills in order to achieve her goals and solve the tasks assigned to her. SHe’s not afraid to renew because she knows it brought her this far.",
+      "writer": "- Makkai Gábor (husband)"
+    },
+
+    {
+      "quote": "Timi is an enthusiastic and persistent person,and I really like to work with her.She is very creative,and I like to learn from her.I can count on her if I have some issues, she cares with others when needed.she is a very good team player, and also a very good person who can learn from her mistakes and encourage herself/others to do her/their best.",
+      "writer": "- Asoum Alagha (teammate)"
+    },
+    {
+      "quote": "  Timi is a conscientious and creative member of a team. She showed great effort to complete the given tasks in time and was not afraid to ask us whenever she had a question. She found the common voice easily with everyone, so was always a cheerful member of the team.  Dividing the tasks is not easy, but she does it well by keeping in mind the other teammates skills. I think she will be a loyal and reliable junior developer you can count on.",
+      "writer": "- Szabó Rudi (Mentor)"
+    }
+  ]
+}
