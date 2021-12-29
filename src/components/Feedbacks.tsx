@@ -1,6 +1,7 @@
-import { Box, Card } from '@mui/material';
-import { useState } from 'react';
+import { Box, Card, Typography } from '@mui/material';
+import { useContext, useState } from 'react';
 import styled from 'styled-components';
+import { WebsiteContext } from '../context/WebsiteContext';
 
 const SlideshowContainer = styled(Card)`
   position: relative;
@@ -61,54 +62,47 @@ const RightArrow = styled.a`
 export default function Feedbacks() {
   const [selectQuote, setSelectQuote] = useState(0);
 
-  const Feedbacks = [
-    { quote: 'I love you the more in that I believe you had liked me for my own sake and for nothing else', writer: '- John Keats' },
-
-    {
-      quote:
-        'Timi is an enthusiastic and persistent person,and I really like to work with her.She is very creative,and I like to learn from her.I can count on her if I have some issues, she cares with others when needed.she is a very good team player, and also a very good person who can learn from her mistakes and encourage herself/others to do her/their best.',
-      writer: '- Asoum Alagha (teammate)'
-    },
-    {
-      quote:
-        '  Timi is a conscientious and creative member of a team. She showed great effort to complete the given tasks in time and was not afraid to ask us whenever she had a question. She found the common voice easily with everyone, so was always a cheerful member of the team.  Dividing the tasks is not easy, but she does it well by keeping in mind the other teammates skills. I think she will be a loyal and reliable junior developer you can count on.',
-      writer: '- Szabó Rudi (Mentor)'
-    }
-  ];
+  const { ContentInfo } = useContext(WebsiteContext);
 
   return (
-    <SlideshowContainer sx={{ background: '#5b5b5d' }}>
-      {Feedbacks.map(
-        ({ quote, writer }: any, i: number) =>
-          i === selectQuote && (
-            <Blockquote>
-              <MySlides key={i}>
-                <q>{quote}</q>
-                <p>{writer}</p>
-              </MySlides>
-            </Blockquote>
-          )
-      )}
-      <LeftArrow
-        onClick={() => {
-          if (selectQuote <= 0) {
-            setSelectQuote(Feedbacks.length - 1);
-          } else {
-            setSelectQuote(selectQuote - 1);
-          }
-        }}>
-        ❮
-      </LeftArrow>
-      <RightArrow
-        onClick={() => {
-          if (selectQuote >= Feedbacks.length - 1) {
-            setSelectQuote(0);
-          } else {
-            setSelectQuote(selectQuote + 1);
-          }
-        }}>
-        ❯
-      </RightArrow>
-    </SlideshowContainer>
+    <Box>
+      <Typography variant='h4' align='center' style={{ color: 'white', padding: '40px 0px 0px' }}>
+        Feedbacks
+      </Typography>
+      <div style={{ width: '30%', margin: '8px auto 40px', border: '1px solid #0192ae', opacity: '0.5' }} />
+      <SlideshowContainer sx={{ background: '#5b5b5d' }}>
+        {ContentInfo.feedbacks.map(
+          ({ quote, writer }: any, i: number) =>
+            i === selectQuote && (
+              <Blockquote>
+                <MySlides key={i}>
+                  <q>{quote}</q>
+                  <p>{writer}</p>
+                </MySlides>
+              </Blockquote>
+            )
+        )}
+        <LeftArrow
+          onClick={() => {
+            if (selectQuote <= 0) {
+              setSelectQuote(ContentInfo.feedbacks.length - 1);
+            } else {
+              setSelectQuote(selectQuote - 1);
+            }
+          }}>
+          ❮
+        </LeftArrow>
+        <RightArrow
+          onClick={() => {
+            if (selectQuote >= ContentInfo.feedbacks.length - 1) {
+              setSelectQuote(0);
+            } else {
+              setSelectQuote(selectQuote + 1);
+            }
+          }}>
+          ❯
+        </RightArrow>
+      </SlideshowContainer>
+    </Box>
   );
 }

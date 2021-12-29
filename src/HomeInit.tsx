@@ -3,19 +3,17 @@ import styled from 'styled-components';
 import Home from './home/Home';
 import Footer from './components/Footer';
 import Introduce from './home/Introduce';
-import Technologies from './components/Technologies';
 import Hobbies from './components/Hobbies';
 import Feedbacks from './components/Feedbacks';
 import { Grid } from '@mui/material';
 import { Router } from 'react-router-dom';
 import history from './utils/history';
 import WorkExperience from './components/WorkExperience';
-import IntroduceImages from './components/IntroduceImages';
+import Skills from './components/Skills';
 import Nav from './nav/Nav';
 
 const Body = styled.div`
   width: 100%;
-
   /*   background-color: #3c3a3d; */
   justify-content: center;
   color: white;
@@ -43,12 +41,11 @@ export default function HomeInit() {
             <Introduce />
           </Grid>
           <Grid item xs={12} md={9}>
-            {/* <Nav /> */}
             <BlocksContainer>
+              <Nav />
               <Home />
               <WorkExperience />
-              <IntroduceImages />
-              <Technologies />
+              <Skills />
               <Hobbies />
               <Feedbacks />
               <Footer />
