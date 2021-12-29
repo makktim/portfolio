@@ -1,20 +1,28 @@
-import React, { useState, useEffect } from 'react';
-import huContent from '../language/huContent.json';
-import enContent from '../language/enContent.json';
-import { WebSiteContextProvider } from './WebsiteContext';
+import React, { createContext, useEffect, useState } from 'react';
+import huContent from '../content/hu.json';
+import enContent from '../content/en.json';
 
+const context: {
+  setLanguage?: any;
+  language?: any;
+  ContentInfo?: any;
+} = {};
 
-export default function HomePageState(props: any) {
+export const WebsiteContext = createContext(context);
+
+export const WebsiteContextProvider = WebsiteContext.Provider;
+export const WebsiteContextConsumer = WebsiteContext.Consumer;
+
+export default function NavProvider({ children }: any) {
   const [language, setStateLanguage] = useState('');
   const [ContentInfo, setContentInfo]: any = useState(huContent);
 
   useEffect(() => {
-    _checkThemeAndLanguage();
+    checkLanguage();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  //   Default theme: light, default language: English
-  const _checkThemeAndLanguage = () => {
+  const checkLanguage = () => {
     if (localStorage.getItem('language') != null) {
       const _language: any = localStorage.getItem('language');
       setStateLanguage(_language);
@@ -39,14 +47,13 @@ export default function HomePageState(props: any) {
   };
 
   return (
-    <WebSiteContextProvider
+    <WebsiteContextProvider
       value={{
+        setLanguage,
         language: language,
-        setLanguage: setLanguage,
         ContentInfo
-      }}
-    >
-      {props.children}
-    </WebSiteContextProvider>
+      }}>
+      {children}
+    </WebsiteContextProvider>
   );
 }

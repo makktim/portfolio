@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { styled } from '@mui/system';
-import { WebSiteContext } from '../utils/WebsiteContext';
+import { WebsiteContext } from '../context/WebsiteContext';
 import avatar from '../pictures/avatar.png';
 import { Button } from '@mui/material';
-import { useNav } from '../customHooks/useNav';
+import { HashLink as Link } from 'react-router-hash-link';
 
 const Wrapper = styled('div')`
   display: flex;
@@ -12,26 +12,26 @@ const Wrapper = styled('div')`
   flex-wrap: wrap;
   align-items: center;
   padding-bottom: 7rem;
-  /*   margin-top: 5vh; */
-  /*   background: #212121; */
   background: #5b5b5d;
 `;
 
 const Text = styled('div')`
-  width: 30rem;
+  width: 25rem;
   margin-left: 1rem;
   max-width: 100%;
   line-height: 2em;
   overflow: hidden;
 `;
 
-export const MoreButton = styled(Button)({
+export const MoreButton = styled(Link)({
   width: '12rem',
   height: '4rem',
   margin: '16px 0px',
   background: '#0192ae',
   borderRadius: '16px',
   cursor: 'pointer',
+  textDecoration: 'none',
+  color: 'white',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -42,30 +42,18 @@ export const MoreButton = styled(Button)({
 });
 
 export default function Home() {
-  const { ContentInfo } = useContext(WebSiteContext);
-  const { Header } = ContentInfo;
-
-  const aboutRef = useNav('Introduce');
+  const { ContentInfo } = useContext(WebsiteContext);
 
   return (
-    <section ref={aboutRef} id='introduceContainer'>
-      <Wrapper>
-        <div>
-          <Text style={{ fontSize: '42px' }}>Hello!</Text>
-          <Text>
-            Én egy Full-stack fejlesztő vagyok, aki Mosolygós, Barátságos, Sportos, állatbarát, aki keresi a kihívásokat és a lehetőséget a
-            fejlődésre. Ezért választottam hivatásomnak a szoftverfejlesztés világát, ahol nap mint nap lehetőségem van egy problémára megoldást
-            keresni vagy új dolgot létrehozni.
-          </Text>
-          <MoreButton variant='contained'>Bővebben rólam</MoreButton>
-        </div>
-        <div>
-          <img style={{ height: '30rem', width: 'auto', paddingRight: '15px', paddingLeft: '15px' }} alt='phone' src={avatar} />
-        </div>
-        {/*       {Header.titles.map((_title: any, index: number) => (
-        <BigTitle key={index} style={{ color: _title.color }}></BigTitle>
-      ))} */}
-      </Wrapper>
-    </section>
+    <Wrapper id='introduce'>
+      <div>
+        <Text style={{ fontSize: '42px' }}>Hello!</Text>
+        <Text>{ContentInfo.home.description}</Text>
+        <MoreButton to='#about'>{ContentInfo.home.button}</MoreButton>
+      </div>
+      <div>
+        <img style={{ height: '30rem', width: 'auto', paddingRight: '15px', paddingLeft: '15px' }} alt='phone' src={avatar} />
+      </div>
+    </Wrapper>
   );
 }
