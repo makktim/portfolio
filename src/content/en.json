@@ -6,7 +6,7 @@
       { "icon": "phone", "value": "+3670/553-5813" },
       { "icon": "email", "value": "kasatimi01@gmail.com" },
       { "icon": "home", "value": "1108 Bp, Hang utca 4." },
-      { "icon": "gitHub", "value": "Github Link" }
+      { "icon": "gitHub", "value": "https://github.com/makktim/portfolio.git" }
     ],
     "experience": [
       {
@@ -168,7 +168,7 @@
       },
       {
         "icon": "gitHub",
-        "link": "https://github.com/"
+        "link": "https://github.com/makktim"
       }
     ]
   }

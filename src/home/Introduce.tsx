@@ -39,9 +39,15 @@ export default function Introduce() {
         {ContentInfo.introduce.contacts.map(({ icon, value }: any) => (
           <ContactBox style={{ color: '#0192ae' }}>
             <Icon icon={icon} />
-            <Typography variant='body1' component='div' style={{ color: '#0192ae' }}>
-              {value}
-            </Typography>
+            {icon === 'gitHub' ? (
+              <a href={value} style={{ color: '#0192ae' }}>
+                portfolio gitHub link
+              </a>
+            ) : (
+              <Typography variant='body1' component='div' style={{ color: '#0192ae' }}>
+                {value}
+              </Typography>
+            )}
           </ContactBox>
         ))}
       </div>
