@@ -32,9 +32,9 @@ export default function Introduce() {
 
   return (
     <Main>
-      <img style={{ borderRadius: '50%', margin: '1vh auto 10px', width: 200, height: 200, objectFit: 'cover' }} src={profilePicture} alt='mypic' />
+      <img style={{ borderRadius: '50%', margin: '1vh auto 12px', width: 200, height: 200, objectFit: 'cover' }} src={profilePicture} alt='mypic' />
       <div style={{ fontSize: '26px', fontWeight: 600, margin: 'auto' }}>{ContentInfo.introduce.name}</div>
-      <q style={{ color: '#0192ae', textAlign: 'center', padding: '15px', fontSize: 18 }}>{ContentInfo.introduce.quote}</q>
+      <q style={{ color: '#0192ae', textAlign: 'center', padding: '16px', fontSize: 18 }}>{ContentInfo.introduce.quote}</q>
       <div>
         {ContentInfo.introduce.contacts.map(({ icon, value }: any) => (
           <ContactBox style={{ color: '#0192ae' }}>
@@ -48,7 +48,7 @@ export default function Introduce() {
       <div style={{ display: 'flex', flexDirection: 'column', margin: '10px' }}>
         {ContentInfo.introduce.experience.map(({ sectionTitle, work }: any) => (
           <div>
-            <Typography variant='body1' gutterBottom component='div' style={{ color: '#0192ae' }}>
+            <Typography variant='body1' gutterBottom component='div' style={{ color: '#0192ae', margin: '10px 0px' }}>
               {sectionTitle}
             </Typography>
             {work.map(({ company, position, date }: any) => (

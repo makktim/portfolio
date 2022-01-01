@@ -1,10 +1,10 @@
 import { Box, Grid, styled, Typography } from '@mui/material';
-import picture17 from '../pictures/17.jpg';
 import picture5 from '../pictures/5.jpeg';
 import picture16 from '../pictures/16.jpeg';
 import picture13 from '../pictures/13.jpeg';
-import picture4 from '../pictures/4.jpeg';
+import picture2 from '../pictures/9.jpeg';
 import picture11 from '../pictures/11.jpeg';
+import picutres17 from '../pictures/leezr.jpeg';
 import { useContext } from 'react';
 import { WebsiteContext } from '../context/WebsiteContext';
 
@@ -50,16 +50,16 @@ export default function Hobbies() {
   return (
     <Box id='hobbies'>
       <Typography variant='h4' align='center' style={{ color: 'white', paddingTop: '5rem' }}>
-        Hobbies
+        {ContentInfo.hobbies.title}
       </Typography>
-      <div style={{ width: '30%', margin: '8px auto 10px', border: '1px solid #0192ae', opacity: '0.5' }} />
-      <Typography sx={{ margin: '0px 40px 40px' }} variant='subtitle2' align='center' style={{ color: 'white' }}>
+      <div style={{ width: '30%', margin: '8px auto 12px', border: '1px solid #0192ae', opacity: '0.5' }} />
+      <Typography sx={{ margin: '0px 42px 42px' }} variant='subtitle2' align='center' style={{ color: 'white' }}>
         {ContentInfo.hobbies.description}
       </Typography>
       <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '1rem 5rem 5rem 5rem' }}>
         <Gallery container>
           <Grid item xs={12} md={2}>
-            <Img src={picture17} alt='' />
+            <Img src={picutres17} alt='' />
           </Grid>
           <Grid item xs={12} md={2}>
             <Img src={picture5} alt='' />
@@ -71,7 +71,7 @@ export default function Hobbies() {
             <Img src={picture16} alt='' />
           </Grid>
           <Grid item xs={12} md={2}>
-            <Img src={picture4} alt='' />
+            <Img src={picture2} alt='' />
           </Grid>
           <Grid item xs={12} md={2}>
             <Img src={picture11} alt='' />

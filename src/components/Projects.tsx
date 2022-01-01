@@ -31,7 +31,7 @@ export default function Projects() {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', width: '100%' }}>
       {Object.entries(projectArray).map(([key, item]: any, index) => (
-        <Grid sx={{ paddingLeft: ['1px', '1rem'] }} container key={index} /* sx={{ display: 'flex', flexDirection: 'column', marginLeft: '2rem' }} */>
+        <Grid sx={{ paddingLeft: ['1px', '1rem'] }} container key={index}>
           {item.map(({ name, technologies }: any, i: number) => (
             <Grid item xs={8} md={10} key={i}>
               <SkillTitle variant='h6'>{name}</SkillTitle>

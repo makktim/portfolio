@@ -19,7 +19,7 @@ const Text = styled(Typography)`
   width: 25rem;
   margin-left: 1rem;
   max-width: 100%;
-  line-height: 2em;
+  line-height: 1.7em;
   overflow: hidden;
   @media (max-width: 900px) {
     width: auto;
@@ -45,10 +45,10 @@ export const MoreButton = styled(Link)({
 });
 
 const Img = styled('img')`
-  height: 30rem;
+  height: 25rem;
   width: auto;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 16px;
+  padding-left: 16px;
   @media (max-width: 900px) {
     height: 20rem;
   }
@@ -61,7 +61,9 @@ export default function Home() {
     <Wrapper id='introduce'>
       <div>
         <Text style={{ fontSize: '42px' }}>Hello!</Text>
-        <Text>{ContentInfo.home.description}</Text>
+        <Text>{ContentInfo.home.descriptionOne}</Text>
+        <Text>{ContentInfo.home.descriptionTwo}</Text>
+        <Text>{ContentInfo.home.descriptionThree}</Text>
         <MoreButton to='#about'>{ContentInfo.home.button}</MoreButton>
       </div>
       <div>

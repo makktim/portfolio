@@ -2,9 +2,9 @@ import { Box, Grid, styled } from '@mui/material';
 import picture6 from '../pictures/6.jpeg';
 import picture3 from '../pictures/3.jpeg';
 import picture5 from '../pictures/me.jpeg';
-import picture2 from '../pictures/2.jpg';
 import picture14 from '../pictures/14.jpeg';
 import picture1 from '../pictures/1.jpg';
+import picture4 from '../pictures/4.jpeg';
 
 export default function IntroduceImages() {
   const Gallery = styled(Grid)`
@@ -59,7 +59,7 @@ export default function IntroduceImages() {
           <Img src={picture1} alt='' />
         </Grid>
         <Grid item xs={12} md={2}>
-          <Img src={picture2} alt='' />
+          <Img src={picture4} alt='' />
         </Grid>
         <Grid item xs={12} md={2}>
           <Img src={picture3} alt='' />

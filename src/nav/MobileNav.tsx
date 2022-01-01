@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import React, { useContext, useState } from 'react';
 import { styled } from '@mui/system';
 import { WebsiteContext } from '../context/WebsiteContext';
@@ -17,8 +17,8 @@ const NavDiv = styled('div')`
   z-index: 10;
   top: 0;
   display: flex;
-  justify-content: end;
-  background-color: rgba(21, 21, 21, 0.7);
+  justify-content: start;
+  background-color: rgb(21, 21, 21);
 `;
 
 const DropdownItem = styled(MenuItem)`
@@ -41,6 +41,8 @@ const NavButton = styled(Link)`
   margin: 1em;
   padding-bottom: 0.3em;
   text-decoration: none;
+  display: flex;
+  flex-direction: row;
   cursor: pointer;
 `;
 
@@ -48,18 +50,16 @@ const FlagBox = styled(Box)`
   display: flex;
   align-items: center;
   text-align: center;
-  margin: auto 12px;
+  margin: 12px;
+  padding: 6px;
   color: #0192ae;
   cursor: pointer;
-  padding: 8px;
-  border: 1px solid #0192ae;
-  border-radius: 50%;
   :hover {
     background-color: #363636;
   }
 `;
 
-const Nav = () => {
+const MobileNav = () => {
   const { setLanguage, language, ContentInfo } = useContext(WebsiteContext);
 
   const [anchorEl, setAnchorEl] = useState(null);
@@ -74,15 +74,9 @@ const Nav = () => {
 
   return (
     <NavDiv>
-      {ContentInfo.header.navLinks.map(({ navLinkId, scrollToId }: any, idx: number) => (
-        <NavButton smooth to={`#${scrollToId}`} key={idx}>
-          {navLinkId}
-        </NavButton>
-      ))}
-
       <React.Fragment>
         <FlagBox onClick={handleClick}>
-          <Icon icon={'flag'} />
+          <Icon icon={'menu'} />
         </FlagBox>
         <Menu
           anchorEl={anchorEl}
@@ -94,7 +88,7 @@ const Nav = () => {
             sx: {
               overflow: 'visible',
               filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
-              bgcolor: 'rgba(21, 21, 21, 0.7)',
+              bgcolor: 'rgb(21, 21, 21)',
               mt: 1.5,
               '& .MuiAvatar-root': {
                 width: 16,
@@ -118,6 +112,14 @@ const Nav = () => {
           }}
           transformOrigin={{ horizontal: 'right', vertical: 'top' }}
           anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}>
+          {ContentInfo.header.navLinks.map(({ navLinkId, scrollToId }: any, idx: number) => (
+            <NavButton smooth to={`#${scrollToId}`} key={idx}>
+              {navLinkId}
+            </NavButton>
+          ))}
+          <Typography variant='h6' align='left' style={{ color: 'white' }}>
+            Nyelv
+          </Typography>
           {ContentInfo.header.language.map(({ title, lang }: any, index: number) => (
             <DropdownItem
               active={language === lang}
@@ -134,4 +136,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default MobileNav;

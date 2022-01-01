@@ -14,11 +14,11 @@ const HeaderTop = styled('div')`
   justify-content: center;
   z-index: 11;
   @media (max-width: 1024px) {
-    padding: 10px;
+    padding: 12px;
     font-size: 14px;
   }
   @media (max-width: 768px) {
-    padding: 20px 30px;
+    padding: 22px 32px;
     margin: 0;
   }
 `;

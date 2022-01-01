@@ -4,7 +4,7 @@
     "quote": "Fordítsd arcodat a nap felé, mert akkor minden árnyék mögéd kerül",
     "contacts": [
       { "icon": "phone", "value": "+3670/553-5813" },
-      { "icon": "email", "value": "kasatim01@gmail.com" },
+      { "icon": "email", "value": "kasatimi01@gmail.com" },
       { "icon": "home", "value": "1108 Bp, Hang utca 4." },
       { "icon": "gitHub", "value": "Github Link" }
     ],
@@ -12,15 +12,19 @@
       {
         "sectionTitle": "MUNKATAPASZTALAT",
         "work": [
-          { "company": "Cognityv Technologies Kft.", "position": "Pozíció: Full Stack fejlesztő (React, NodeJs, React Native", "date": "2020-" },
+          {
+            "company": "Cognityv Technologies Kft.",
+            "position": "Pozíció: Full Stack fejlesztő (React, NodeJs, React Native)",
+            "date": "2020-jelenleg"
+          },
           { "company": "Trenkwalder Recruitment Kft.", "position": "Pozíció: Projekt Munkaügyi koordinátor", "date": " 2015-2016" }
         ]
       },
       {
         "sectionTitle": "ISKOLAI VÉGZETTSÉG",
         "work": [
-          { "school": "CODECOL (Full Stack fejlesztői képzés)", "date": " 2019-2020" },
-          { "company": "Széchenyi István Gyak. Ker. Szakközép", "date": "2006-2011" }
+          { "company": "CODECOL (Full Stack fejlesztői képzés)", "position": "", "date": " 2019-2020" },
+          { "company": "Széchenyi István Gyak. Ker. Szakközép Iskola", "position": "", "date": "2006-2011" }
         ]
       }
     ]
@@ -34,16 +38,18 @@
     ]
   },
   "home": {
-    "description": "Én egy Mosolygós, Barátságos, Sportos, állatbarát fejlesztő vagyok, aki keresi a kihívásokat és a lehetőséget a fejlődésre.",
+    "descriptionOne": "Köszönöm, hogy ellátogattál oldalamra. 🙂",
+    "descriptionTwo": "Remélem, hogy a lentiekben mindent megtudsz rólam, amit szeretnél és olyan mosoly lesz az arcodon, mint amilyen az enyémen volt, mikor ezt az oldalt csináltam. Kérdés esetén keress a bal oldalon látható elérhetőségeimen. ☎️📫📨",
+    "descriptionThree": "Legyen szép napod! 🌅",
     "button": "Bővebben rólam"
   },
   "about": {
-    "workExperience": "Az elmúlt két évben főleg React, React Natíve, Typescript és NodeJs technológiákat használtam a munkám során, ahol a célunk az volt, hogy létrehozzunk egy alkalmazást a vállalkozások életének megkönnyítésére. Ezen kívül a partner cégek számára készítettünk honlapokat, amit Gatsby vagy React használatával késztettünk el.",
+    "workExperience": "Az elmúlt két évben főleg React, React Natíve, Typescript és NodeJs technológiákat használtam a munkám során, ahol a célunk az volt, hogy létrehozzunk egy alkalmazást a vállalkozások életének megkönnyítésére. Emellett partnercégeink számára Gatsby vagy React használatával készítettünk honlapokat.",
     "title": "Rólam",
-    "description": "Azért is választottam hivatásomnak a szoftverfejlesztés világát, mert itt nap mint nap alkalmam nyílik egy problémára megoldást keresni vagy akár új dolgot létrehozni.",
+    "description": "Én egy Mosolygós, Barátságos, Sportos, állatbarát fejlesztő vagyok, aki keresi a kihívásokat és a lehetőséget a fejlődésre. Azért is választottam hivatásomnak a szoftverfejlesztés világát, mert itt nap mint nap alkalmam nyílik egy problémára megoldást keresni vagy akár új dolgot létrehozni.",
     "categories": [
       {
-        "title": "Technikai készségek",
+        "title": "Technológiai készségek",
         "components": "Programming Skills",
         "icon": "computer",
         "hardSkills": {
@@ -62,12 +68,12 @@
         "components": "Soft skills",
         "icon": "theaterComedyIcon",
         "softSkills": {
-          "first": [{ "name": "Csapatjátékos" }, { "name": "Kommunikáció" }, { "name": "Kitartó" }, { "name": "ambíciózus" }, { "name": "Kreatív" }],
+          "first": [{ "name": "Csapatjátékos" }, { "name": "Kommunikatív" }, { "name": "Kitartó" }, { "name": "Ambíciózus" }, { "name": "Kreatív" }],
           "second": [
-            { "name": "Időgazdálkodás" },
-            { "name": "Probléma megoldó" },
+            { "name": "Szervezési készség" },
+            { "name": "Problémamegoldó" },
             { "name": "Célorientált" },
-            { "name": "Alkalmazkodó kézség" },
+            { "name": "Alkalmazkodóképes" },
             { "name": "Türelmes" }
           ]
         }
@@ -97,30 +103,35 @@
           "first": [
             {
               "name": "Filmek / Sorozatok",
-              "technologies": "Filmek és sorozzatok minden mennyiségben :)"
+              "technologies": "Filmek és sorozatok minden mennyiségben. :)"
             },
             {
               "name": "Sport",
-              "technologies": "Gyerekkorom óta az egyik kedvenc sportágam, a kosárlabda, de a legtöbb sportot szívesen űzöm vagy próbálom ki, ha tehetem."
+              "technologies": "Gyerekkorom óta az egyik kedvenc sportágam a kosárlabda, de a legtöbb sportot szívesen űzöm vagy próbálom ki, ha tehetem."
             },
-            { "name": "Zene", "technologies": "Ha kell kikapcsol, ha kell felpörget, de mindíg is az életem része volt" }
+            { "name": "Zene", "technologies": "Ha kell kikapcsol, ha kell felpörget, de mindig is az életem része volt." }
           ],
           "second": [
             {
               "name": "Olvasás / Önfejlesztés",
-              "technologies": "Szívesen olvasok könyveket,arról, hogy válhaunk jobbá, de időnként kikapcsolódásnak a legjobb egy izgalmas regény."
+              "technologies": "Szívesen olvasok könyveket arról, hogy válhaunk jobbá, de időnként kikapcsolódásnak a legjobb egy izgalmas regény."
             },
-            { "name": "Utazás", "technologies": "Mindegy, hogy Belföld, külföld, túra vagy wellness, ha tehetjük megyünk!" },
-            { "name": "Barátok", "technologies": "Utazás, túrázás, lézerharc és néha egy kis felujítás" }
+            { "name": "Utazás", "technologies": "Mindegy, hogy belföld, külföld, túra vagy wellness, ha tehetjük, megyünk." },
+            {
+              "name": "Barátok",
+              "technologies": "Legyen szó utazásról, túrázásról, lézerharcról és néha egy kis felújításról, mi minden buliban benne vagyunk."
+            }
           ]
         }
       }
     ]
   },
   "hobbies": {
+    "title": "Hobbik",
     "description": "Szabadidőmben szeretek új dolgokat kipróbálni és a párommal, kutyusunkkal vagy barátaimmal tölteni az időt."
   },
   "feedbacks": {
+    "title": "Visszajelzések",
     "description": "Fontosnak tartom a visszajelzést, a környezetünkben élőktől, mert így tudunk leginkább fejlődni és jobbá válni.",
     "quote": [
       {

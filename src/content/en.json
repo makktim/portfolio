@@ -1,10 +1,10 @@
 {
   "introduce": {
     "name": "Makkai - Kása Tímea",
-    "quote": "Turn your face towards the sun, because then all the shadows will be behind you",
+    "quote": "Turn your face towards the sun and all the shadows will be behind you",
     "contacts": [
       { "icon": "phone", "value": "+3670/553-5813" },
-      { "icon": "email", "value": "kasatim01@gmail.com" },
+      { "icon": "email", "value": "kasatimi01@gmail.com" },
       { "icon": "home", "value": "1108 Bp, Hang utca 4." },
       { "icon": "gitHub", "value": "Github Link" }
     ],
@@ -12,7 +12,11 @@
       {
         "sectionTitle": "WORK EXPERIENCE",
         "work": [
-          { "company": "Cognityv Technologies Kft.", "position": "Position: Full Stack developer (React, NodeJs, React Native", "date": "2020-" },
+          {
+            "company": "Cognityv Technologies Kft.",
+            "position": "Position: Full Stack developer (React, NodeJs, React Native)",
+            "date": "2020-present"
+          },
           { "company": "Trenkwalder Recruitment Kft.", "position": "Position: Project labor coordinator", "date": " 2015-2016" }
         ]
       },
@@ -20,7 +24,7 @@
         "sectionTitle": "EDUCATIONAL ATTAINMENT",
         "work": [
           { "company": "CODECOL (Full Stack developer training)", "position": "", "date": " 2019-2020" },
-          { "company": "Széchenyi István Pract. trade High school", "position": "", "date": "2006-2011" }
+          { "company": "Széchenyi István Pract. trade High School", "position": "", "date": "2006-2011" }
         ]
       }
     ]
@@ -34,14 +38,16 @@
     ]
   },
   "home": {
-    "description": "I am a Smiling, Friendly, Athletic, Pet Friendly developer who is looking for challenges and opportunities for improve myself.",
+    "descriptionOne": "Thank you for visiting my page. 🙂",
+    "descriptionTwo": " I hope you will find everything you want about me below and have a smile on your face like mine was when I made this page. If you have any questions, please contact me.☎️📫📨",
+    "descriptionThree": "Have a nice day! 🌅",
     "button": "More about me",
     "avatarImage": ""
   },
   "about": {
-    "workExperience": "In the last two years I have mainly used React, React Native, Typescript, and NodeJs technologies in my work, where our goal has been to create an application to make life easier for businesses. In addition, we created websites for the partner companies, which we created using Gatsby or React.",
+    "workExperience": "In the last two years I have mainly used React, React Native, Typescript, and NodeJs technologies in my work, where our goal has been to create an application to make the life easier for the firms. In addition, we created websites for our partner companies, which we created by using Gatsby or React.",
     "title": "About",
-    "description": "One thea reason is why I chose the world of software development as my profession, where every day I have the opportunity to find a solution to a problem or even create something new.",
+    "description": "I am a Smiling, Friendly, Athletic, Pet Friendly developer who is looking for challenges and opportunities for improve myself.One of the reasons why I chose the world of software development as my profession is that every day I have the opportunity to find a solution to a problem or even to create something new.",
     "categories": [
       {
         "title": "Programming Skills",
@@ -74,7 +80,7 @@
             { "name": "Time management" },
             { "name": "Problem solving skill" },
             { "name": "Solution oriented" },
-            { "name": "adaptability" },
+            { "name": "Adaptability" },
             { "name": "Patient" }
           ]
         }
@@ -104,38 +110,46 @@
           "first": [
             {
               "name": "Movies / Series",
-              "technologies": "Movies and series in all quantities"
+              "technologies": "Movies and series in all quantities."
             },
             {
               "name": "Sport",
-              "technologies": "One of my favorite sports since I was a kid is basketball, but I like to play or try most sports if I can."
+              "technologies": "One of my favorite sports since I was a kid is basketball, but I like to play or try any sports if I can."
             },
-            { "name": "Music", "technologies": "If I need it turn of, If I need it spins up, but its always been a part of my life" }
+            { "name": "Music", "technologies": "If I need it turns me off, If I need it spins me up, but it has always been a part of my life." }
           ],
           "second": [
             {
               "name": "Reading / Movies / series",
-              "technologies": "I enjoy reading books about how to get better, but sometimes, the best thing is to relax an exciting novel."
+              "technologies": "I enjoy reading books about how to get better, but sometimes the best thing is to relax with an exciting novel."
             },
-            { "name": "Travelling", "technologies": "It doesn't matter if it's domestic, abroad, hiking or wellness, if it possible we can go!" },
-            { "name": "Friends", "technologies": "Traveling, hiking, eating, laser fighting and sometimes a little refurbishment" }
+            {
+              "name": "Travelling",
+              "technologies": "It doesn't matter if it's a domestic, an abroad, a hiking or a wellness trip, we go if we can!"
+            },
+            {
+              "name": "Friends",
+              "technologies": "It can be traveling, hiking, eating, laser fighting and sometimes a little renovation, we are in every party."
+            }
           ]
         }
       }
     ]
   },
   "hobbies": {
-    "description": "In my free time I like to try new things and spend time with my partner, out doggie or our friends."
+    "title": "Hobbies",
+    "description": "In my free time I like to try new things and spend time with my partner, our doggie or our friends."
   },
   "feedbacks": {
-    "description": "I consider feedback from those around us to be important because this is the best way we can develop and improve.",
+    "title": "Feedbacks",
+    "description": "I consider feedbacks very important from people around us because this is the best way how to improve and get better.",
     "quote": [
       {
         "quote": "  Timi is a conscientious and creative member of a team. She showed great effort to complete the given tasks in time and was not afraid to ask us whenever she had a question. She found the common voice easily with everyone, so was always a cheerful member of the team.  Dividing the tasks is not easy, but she does it well by keeping in mind the other teammates skills. I think she will be a loyal and reliable junior developer you can count on.",
         "writer": "- Szabó Rudi (Mentor)"
       },
       {
-        "quote": "My wife is a cheerful, kind, smart and purposeful personality who is constantly training herself and developing her skills in order to achieve her goals and solve the tasks assigned to her. SHe’s not afraid to renew because she knows it brought her this far.",
+        "quote": "My wife is a cheerful, kind, smart and purposeful personality who is constantly training herself and developing her skills in order to achieve her goals and solve the tasks assigned to her. She’s not afraid to renew because she knows it brought her this far.",
         "writer": "- Makkai Gábor (Husband)"
       },
 

@@ -16,7 +16,7 @@ const SlideshowContainer = styled(Card)`
 `;
 
 const MySlides = styled(Box)`
-  padding: 40px;
+  padding: 42px;
   background-color: rgba(0, 0, 0, 0.1);
   text-align: center;
   min-height: 230px;
@@ -34,7 +34,7 @@ const LeftArrow = styled('a')`
   position: absolute;
   top: 50%;
   width: auto;
-  margin-top: -30px;
+  margin-top: -28px;
   padding: 16px;
   color: #212121;
   font-weight: bold;
@@ -47,7 +47,7 @@ const RightArrow = styled('a')`
   cursor: pointer;
   top: 50%;
   width: auto;
-  margin-top: -30px;
+  margin-top: -28px;
   padding: 16px;
   color: #212121;
   font-weight: bold;
@@ -65,12 +65,12 @@ export default function Feedbacks() {
   const { ContentInfo } = useContext(WebsiteContext);
 
   return (
-    <Box sx={{ marginBottom: 10 }}>
-      <Typography variant='h4' align='center' style={{ color: 'white', padding: '40px 0px 0px 0px' }}>
-        Feedbacks
+    <Box sx={{ marginBottom: 8 }}>
+      <Typography variant='h4' align='center' style={{ color: 'white', padding: '42px 0px 0px 0px' }}>
+        {ContentInfo.feedbacks.title}
       </Typography>
-      <div style={{ width: '30%', margin: '8px auto 10px', border: '1px solid #0192ae', opacity: '0.5' }} />
-      <Typography sx={{ margin: '0px 40px 40px' }} variant='subtitle2' align='center' style={{ color: 'white' }}>
+      <div style={{ width: '30%', margin: '8px auto 12px', border: '1px solid #0192ae', opacity: '0.5' }} />
+      <Typography sx={{ margin: '0px 42px 42px' }} variant='subtitle2' align='center' style={{ color: 'white' }}>
         {ContentInfo.feedbacks.description}
       </Typography>
       <SlideshowContainer sx={{ background: '#5b5b5d' }}>

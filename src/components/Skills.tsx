@@ -27,10 +27,13 @@ const ButtonStyle = styled(Button)`
     background-color: #0191ae9b;
     opacity: 0.9;
   }
+  @media (max-width: 600px) {
+    padding: 0px 6px 0px 0px;
+  }
 `;
 
 const GridContainer = styled(Grid)`
-  margin: 18px 10px;
+  margin: 18px 12px;
   @media (max-width: 900px) {
     margin: 0px;
   }
@@ -61,8 +64,8 @@ export default function Skills() {
         <Typography variant='h4' align='center' style={{ color: 'white', paddingTop: '5rem' }}>
           {ContentInfo.about.title}
         </Typography>
-        <div style={{ width: '30%', margin: '8px auto 10px', border: '1px solid #0192ae', opacity: '0.5' }} />
-        <Typography sx={{ margin: '0px 40px 40px' }} variant='subtitle2' align='center' style={{ color: 'white' }}>
+        <div style={{ width: '30%', margin: '8px auto 12px', border: '1px solid #0192ae', opacity: '0.5' }} />
+        <Typography sx={{ margin: '0px 42px 42px' }} variant='subtitle2' align='center' style={{ color: 'white' }}>
           {ContentInfo.about.description}
         </Typography>
         <IntroduceImages />

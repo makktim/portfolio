@@ -3,12 +3,12 @@ import { useContext } from 'react';
 import { WebsiteContext } from '../context/WebsiteContext';
 
 const MySlides = styled(Box)`
-  padding: 80px;
+  padding: 82px;
   background-color: rgba(0, 0, 0, 0.1);
   text-align: center;
   font-style: italic;
   @media (max-width: 900px) {
-    padding: 80px 20px;
+    padding: 82px 22px;
   }
 `;
 
@@ -25,8 +25,7 @@ export default function WorkExperience() {
   return (
     <Blockquote>
       <MySlides>
-        <q>{ContentInfo.about.workExperience}</q>
-        <p></p>
+        <div>{ContentInfo.about.workExperience}</div>
       </MySlides>
     </Blockquote>
   );
