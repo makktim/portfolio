@@ -77,7 +77,7 @@ export default function Feedbacks() {
         {ContentInfo.feedbacks.quote.map(
           ({ quote, writer }: any, i: any) =>
             i === selectQuote && (
-              <Blockquote>
+              <Blockquote key={i}>
                 <MySlides key={i}>
                   <q>{quote}</q>
                   <p>{writer}</p>

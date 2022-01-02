@@ -9,7 +9,7 @@ import { WebsiteContext } from '../context/WebsiteContext';
 import Icon from '../utils/icons';
 
 interface IsActiveCategory {
-  readonly isActiveCategory: boolean | undefined;
+  readonly isactivecategory: string | undefined;
 }
 
 const ButtonStyle = styled(Button)`
@@ -19,8 +19,8 @@ const ButtonStyle = styled(Button)`
   transition: 0.25s;
   cursor: pointer;
   border-radius: 15px 50px 50px 5px;
-  background-color: ${({ isActiveCategory }: IsActiveCategory) => (isActiveCategory ? '#0192ae' : 'none')};
-  opacity: ${({ isActiveCategory }: IsActiveCategory) => (isActiveCategory ? '0.9' : '0.5')};
+  background-color: ${({ isactivecategory }: IsActiveCategory) => (isactivecategory === '1' ? '#0192ae' : 'none')};
+  opacity: ${({ isactivecategory }: IsActiveCategory) => (isactivecategory === '1' ? '0.9' : '0.5')};
   &:hover {
     transition: 0.25s;
     margin-left: 0.5rem;
@@ -83,9 +83,9 @@ export default function Skills() {
             xs={8}
             md={4}>
             {ContentInfo.about.categories.map(({ title, icon, components }: any) => (
-              <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+              <div key={title} style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
                 <ButtonStyle
-                  isActiveCategory={components === selectMenu}
+                  isactivecategory={components === selectMenu ? '1' : '0'}
                   variant='text'
                   onClick={() => setSelectMenu(components)}
                   startIcon={

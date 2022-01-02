@@ -118,8 +118,9 @@ const Nav = () => {
           }}
           transformOrigin={{ horizontal: 'right', vertical: 'top' }}
           anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}>
-          {ContentInfo.header.language.map(({ title, lang }: any, index: number) => (
+          {ContentInfo.header.language.map(({ title, lang }: any) => (
             <DropdownItem
+              key={title}
               active={language === lang}
               sx={{ color: language === lang ? '#0192ae' : 'white' }}
               onClick={() => {

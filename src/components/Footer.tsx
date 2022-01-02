@@ -28,8 +28,8 @@ export default function Footer() {
   return (
     <HeaderTop>
       <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
-        {ContentInfo.footer.links.map((item: any) => (
-          <Box sx={{ margin: 1 }}>
+        {ContentInfo.footer.links.map((item: any, index: number) => (
+          <Box key={index} sx={{ margin: 1 }}>
             <a style={{ color: 'white', textDecoration: 'none' }} href={item.link}>
               <Icon icon={item.icon} />
             </a>

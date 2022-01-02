@@ -4,10 +4,6 @@ import get from 'lodash/get';
 import { useContext } from 'react';
 import { WebsiteContext } from '../context/WebsiteContext';
 
-interface CategoryProps {
-  readonly category: boolean | undefined;
-}
-
 const SkillTitle = styled(Typography)`
   display: flex;
   color: #0192ae;
