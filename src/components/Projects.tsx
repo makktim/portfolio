@@ -7,7 +7,6 @@ import { WebsiteContext } from '../context/WebsiteContext';
 const SkillTitle = styled(Typography)`
   display: flex;
   color: #0192ae;
-  cursor: crosshair;
   padding: 6px 0px;
   &:hover,
   &:active {

@@ -8,7 +8,6 @@ const SkillTitle = styled(Typography)`
   display: flex;
   color: white;
   padding: 6px 0px;
-  cursor: crosshair;
   color: #0192ae;
   &:hover,
   &:active {

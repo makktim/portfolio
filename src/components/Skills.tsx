@@ -9,7 +9,7 @@ import { WebsiteContext } from '../context/WebsiteContext';
 import Icon from '../utils/icons';
 
 interface IsActiveCategory {
-  readonly isactivecategory: string | undefined;
+  readonly category: string | undefined;
 }
 
 const ButtonStyle = styled(Button)`
@@ -19,8 +19,8 @@ const ButtonStyle = styled(Button)`
   transition: 0.25s;
   cursor: pointer;
   border-radius: 15px 50px 50px 5px;
-  background-color: ${({ isactivecategory }: IsActiveCategory) => (isactivecategory === '1' ? '#0192ae' : 'none')};
-  opacity: ${({ isactivecategory }: IsActiveCategory) => (isactivecategory === '1' ? '0.9' : '0.5')};
+  background-color: ${({ category }: IsActiveCategory) => (category === '1' ? '#0192ae' : 'none')};
+  opacity: ${({ category }: IsActiveCategory) => (category === '1' ? '0.9' : '0.5')};
   &:hover {
     transition: 0.25s;
     margin-left: 0.5rem;
@@ -85,7 +85,7 @@ export default function Skills() {
             {ContentInfo.about.categories.map(({ title, icon, components }: any) => (
               <div key={title} style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
                 <ButtonStyle
-                  isactivecategory={components === selectMenu ? '1' : '0'}
+                  category={components === selectMenu ? '1' : '0'}
                   variant='text'
                   onClick={() => setSelectMenu(components)}
                   startIcon={

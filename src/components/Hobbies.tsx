@@ -13,7 +13,6 @@ export default function Hobbies() {
 
   const Gallery = styled(Grid)`
     transition: all 0.3s ease(gravity);
-    background-color: #82a6cb;
     cursor: zoom-in;
     height: 40vh;
     @media (max-width: 900px) {
@@ -41,7 +40,19 @@ export default function Hobbies() {
       top: -10%;
     }
     @media (max-width: 900px) {
+      width: 50%;
+      margin-left: 25%;
       &:hover {
+        width: 50%;
+        height: 110%;
+      }
+    }
+    @media (max-width: 600px) {
+      width: 100%;
+      margin-left: 0px;
+      &:hover {
+        width: 125%;
+        height: 110%;
         left: -10%;
       }
     }
