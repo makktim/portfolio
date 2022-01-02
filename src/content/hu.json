@@ -35,7 +35,10 @@
       { "navLinkId": "Bemutatkozás", "scrollToId": "introduce" },
       { "navLinkId": "Rólam", "scrollToId": "about" },
       { "navLinkId": "Hobbik", "scrollToId": "hobbies" }
-    ]
+    ],
+    "categoryTitle": {
+      "title": "Nyelvek"
+    }
   },
   "home": {
     "descriptionOne": "Köszönöm, hogy ellátogattál oldalamra. 🙂",

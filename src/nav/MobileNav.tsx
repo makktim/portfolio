@@ -117,8 +117,8 @@ const MobileNav = () => {
               {navLinkId}
             </NavButton>
           ))}
-          <Typography variant='h6' align='left' style={{ color: 'white' }}>
-            Nyelv
+          <Typography variant='subtitle1' align='left' style={{ color: 'white', marginLeft: 6 }}>
+            {ContentInfo.header.categoryTitle.title}
           </Typography>
           {ContentInfo.header.language.map(({ title, lang }: any, index: number) => (
             <DropdownItem

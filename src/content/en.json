@@ -35,7 +35,10 @@
       { "navLinkId": "Introduce", "scrollToId": "introduce" },
       { "navLinkId": "About", "scrollToId": "about" },
       { "navLinkId": "Hobbies", "scrollToId": "hobbies" }
-    ]
+    ],
+    "categoryTitle": {
+      "title": "Languages"
+    }
   },
   "home": {
     "descriptionOne": "Thank you for visiting my page. 🙂",
