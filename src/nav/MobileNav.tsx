@@ -112,7 +112,7 @@ const MobileNav = () => {
           }}
           transformOrigin={{ horizontal: 'right', vertical: 'top' }}
           anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}>
-          {ContentInfo.header.navLinks.map(({ navLinkId, scrollToId }: any, idx: number) => (
+          {ContentInfo.header.navLinks.map(({ navLinkId, scrollToId }: { navLinkId: string; scrollToId: any }, idx: number) => (
             <NavButton smooth to={`#${scrollToId}`} key={idx}>
               {navLinkId}
             </NavButton>
@@ -120,7 +120,7 @@ const MobileNav = () => {
           <Typography variant='subtitle1' align='left' style={{ color: 'white', marginLeft: 6 }}>
             {ContentInfo.header.categoryTitle.title}
           </Typography>
-          {ContentInfo.header.language.map(({ title, lang }: any, index: number) => (
+          {ContentInfo.header.language.map(({ title, lang }: { title: string; lang: string }, index: number) => (
             <DropdownItem
               active={language === lang}
               sx={{ color: language === lang ? '#0192ae' : 'white' }}

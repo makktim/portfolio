@@ -82,7 +82,7 @@ export default function Skills() {
             item
             xs={8}
             md={4}>
-            {ContentInfo.about.categories.map(({ title, icon, components }: any) => (
+            {ContentInfo.about.categories.map(({ title, icon, components }: { title: string; icon: string; components: string }) => (
               <div key={title} style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
                 <ButtonStyle
                   category={components === selectMenu ? '1' : '0'}

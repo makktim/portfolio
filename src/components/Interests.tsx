@@ -28,7 +28,7 @@ export default function Interests() {
     <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', width: '100%' }}>
       {Object.entries(interestArray).map(([key, item]: any, index) => (
         <Grid sx={{ paddingLeft: '1rem' }} container key={index}>
-          {item.map(({ name, technologies }: any, i: number) => (
+          {item.map(({ name, technologies }: { name: string; technologies: string }, i: number) => (
             <Grid item md={10} key={i}>
               <SkillTitle variant='h6'>{name}</SkillTitle>
               <SkillCaption variant='caption'>{technologies}</SkillCaption>

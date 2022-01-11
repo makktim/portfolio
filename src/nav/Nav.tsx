@@ -74,7 +74,7 @@ const Nav = () => {
 
   return (
     <NavDiv>
-      {ContentInfo.header.navLinks.map(({ navLinkId, scrollToId }: any, idx: number) => (
+      {ContentInfo.header.navLinks.map(({ navLinkId, scrollToId }: { navLinkId: string; scrollToId: string }, idx: number) => (
         <NavButton smooth to={`#${scrollToId}`} key={idx}>
           {navLinkId}
         </NavButton>
@@ -118,7 +118,7 @@ const Nav = () => {
           }}
           transformOrigin={{ horizontal: 'right', vertical: 'top' }}
           anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}>
-          {ContentInfo.header.language.map(({ title, lang }: any) => (
+          {ContentInfo.header.language.map(({ title, lang }: { title: string; lang: string }) => (
             <DropdownItem
               key={title}
               active={language === lang}

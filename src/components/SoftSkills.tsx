@@ -22,7 +22,7 @@ export default function SoftSkills() {
     <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', width: '100%' }}>
       {Object.entries(softSkillsArray).map(([key, item]: any, index) => (
         <Box key={index} sx={{ display: 'flex', flexDirection: 'column' }}>
-          {item.map(({ name }: any, i: number) => (
+          {item.map(({ name }: { name: string }, i: number) => (
             <Box key={i}>
               <SkillTitle>{name}</SkillTitle>
             </Box>

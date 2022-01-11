@@ -22,8 +22,8 @@ export default function HardSkills() {
     <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', width: '100%' }}>
       {Object.entries(hardSkillsArray).map(([key, item]: any, index) => (
         <Box key={index} sx={{ display: 'flex', flexDirection: 'column' }}>
-          {item.map(({ name }: any, i: number) => (
-            <Box key={i} /* category={categoryHover} */>
+          {item.map(({ name }: { name: string }, i: number) => (
+            <Box key={i}>
               <SkillTitle>{name}</SkillTitle>
             </Box>
           ))}

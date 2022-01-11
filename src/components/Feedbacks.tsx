@@ -75,7 +75,7 @@ export default function Feedbacks() {
       </Typography>
       <SlideshowContainer sx={{ background: '#5b5b5d' }}>
         {ContentInfo.feedbacks.quote.map(
-          ({ quote, writer }: any, i: any) =>
+          ({ quote, writer }: { quote: string; writer: string }, i: number) =>
             i === selectQuote && (
               <Blockquote key={i}>
                 <MySlides key={i}>

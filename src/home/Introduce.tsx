@@ -36,7 +36,7 @@ export default function Introduce() {
       <div style={{ fontSize: '26px', fontWeight: 600, margin: 'auto' }}>{ContentInfo.introduce.name}</div>
       <q style={{ color: '#0192ae', textAlign: 'center', padding: '16px', fontSize: 18 }}>{ContentInfo.introduce.quote}</q>
       <div>
-        {ContentInfo.introduce.contacts.map(({ icon, value }: any, index: number) => (
+        {ContentInfo.introduce.contacts.map(({ icon, value }: { icon: string; value: string }, index: number) => (
           <ContactBox key={index} style={{ color: '#0192ae' }}>
             <Icon icon={icon} />
             {icon === 'gitHub' ? (
@@ -52,28 +52,30 @@ export default function Introduce() {
         ))}
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', margin: '10px' }}>
-        {ContentInfo.introduce.experience.map(({ sectionTitle, work }: any) => (
-          <div key={sectionTitle}>
-            <Typography variant='body1' gutterBottom component='div' style={{ color: '#0192ae', margin: '10px 0px' }}>
-              {sectionTitle}
-            </Typography>
-            {work.map(({ company, position, date }: any) => (
-              <div key={company}>
-                <div style={{ display: 'flex', flexDirection: 'row', margin: '10px', justifyContent: 'space-around' }}>
-                  <Typography variant='body1' gutterBottom component='div' style={{ color: '#0192ae' }}>
-                    {date}
-                  </Typography>
-                  <Typography variant='subtitle1' gutterBottom component='div' style={{ margin: '0px 10px' }}>
-                    {company}
+        {ContentInfo.introduce.experience.map(
+          ({ sectionTitle, work }: { sectionTitle: string; work: { company: string; position: string; date: string }[] }) => (
+            <div key={sectionTitle}>
+              <Typography variant='body1' gutterBottom component='div' style={{ color: '#0192ae', margin: '10px 0px' }}>
+                {sectionTitle}
+              </Typography>
+              {work.map(({ company, position, date }: { company: string; position: string; date: string }) => (
+                <div key={company}>
+                  <div style={{ display: 'flex', flexDirection: 'row', margin: '10px', justifyContent: 'space-around' }}>
+                    <Typography variant='body1' gutterBottom component='div' style={{ color: '#0192ae' }}>
+                      {date}
+                    </Typography>
+                    <Typography variant='subtitle1' gutterBottom component='div' style={{ margin: '0px 10px' }}>
+                      {company}
+                    </Typography>
+                  </div>
+                  <Typography variant='subtitle2' gutterBottom component='div'>
+                    {position}
                   </Typography>
                 </div>
-                <Typography variant='subtitle2' gutterBottom component='div'>
-                  {position}
-                </Typography>
-              </div>
-            ))}
-          </div>
-        ))}
+              ))}
+            </div>
+          )
+        )}
       </div>
     </Main>
   );

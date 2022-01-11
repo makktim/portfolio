@@ -3,8 +3,8 @@ import huContent from '../content/hu.json';
 import enContent from '../content/en.json';
 
 const context: {
-  setLanguage?: any;
-  language?: any;
+  setLanguage?: (language: string) => void;
+  language?: string | undefined;
   ContentInfo?: any;
 } = {};
 
